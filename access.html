@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="keywords" content="NTT西日本,日本選手権,東京ドーム,アクセス,交通,乗り換え,ゲート,入り口" />
+<meta name="description" content="第43回 社会人野球日本選手権大会の試合会場、東京ドーム周辺の地図と乗り換えのご案内ページです。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="第43回 社会人野球日本選手権大会" />
+<meta property="og:description" content="第43回 社会人野球日本選手権大会の試合会場、東京ドーム周辺の地図と乗り換えのご案内ページです。" />
+<meta property="og:url" content="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/city/" />
+<meta property="og:site_name" content="第43回 社会人野球日本選手権大会" />
+<meta property="og:country-name" content="Japan,日本" />
+<meta property="og:locality" content="Osaka,大阪" />
+<meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" href="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/city/icon.png" />
+<link rel="stylesheet" href="css/import.css" />
+</head>
+<body onload='initialize()'>
+<!--#include virtual="templates/header-nav.inc"-->
+<main role="main">
+  <article>
+    <header id="title">
+      <h3><span class="fa fa-map-marker"></span>Guidance to a studium</h3>
+      <p>アクセスガイド</p>
+    </header>
+    <div id="canvas"></div>
+    <p id="pan">第43回 社会人野球日本選手権大会 ≫ アクセスガイド</p>
+  </article>
+</main>
+<!--#include virtual="templates/footer.inc"--> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+<script type="text/javascript"
+src="https://maps-api-ssl.google.com/maps/api/js?sensor=false">
+</script> 
+<script type='text/javascript'>
+var Mymap;
+var Mymarker;
+var geocorder;
+var Latlng;
+var Options;
+var info;
+
+var address = '東京都文京区後楽1-3-61';　//　★　目的地の住所　★
+var place = '東京ドーム';　//　★　目的地名　★
+var goal = encodeURI('東京ドーム');　//　★　ルート検索の目的地入力　★
+var gflg = 1;　//　★　住所から場所を特定する：1、しない：0　★
+
+var dat = '&date=' + new Date().getYear() + '%2F' + eval(new Date().getMonth()+1) + '%2F' + new Date().getDate();
+var tim = '&time=' + new Date().getHours() + '%3A' + new Date().getMinutes();
+var link = '<a href="http://www.google.co.jp/maps?ie=UTF8&f=d&dirflg=r&saddr=&daddr=' + goal + dat + '&ttype=dep&sort=time" target="_blank">乗換ルート検索</a>';//　★dirflg：d車　r電車　w徒歩、ttype：dep出発　arr到着★
+
+function initialize(){
+
+		Options = {
+			zoom: 16,　//　★zoomは地図の倍率★
+			center: Latlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			styles: [{
+				stylers: [
+					{ hue: "#012052" },
+					{ saturation: -70 }
+				]
+			}]
+		}
+
+       Mymap = new google.maps.Map(document.getElementById('canvas'), Options);
+       geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode( {'address': address}, function(results, status) {
+
+      if (status == google.maps.GeocoderStatus.OK && gflg == 1) {
+        Latlng = results[0].geometry.location;
+      } else {
+        Latlng = new google.maps.LatLng(35.705768,139.751777);　//　★住所から場所を特定しない（できない）場合、緯度と経度を入力★
+      }
+
+        Mymap.setCenter(Latlng);
+
+        Mymarker = new google.maps.Marker({
+            map: Mymap, 
+            position: Latlng,
+			icon: 'img/common/marker.png'
+        });
+
+            info = new google.maps.InfoWindow({
+            content: '<div style="min-height:3rem;"><strong>【' + place + '】</strong>' + '<br>' + address + '<br>' + link + '</div>',
+            maxWidth: 1000
+            });
+            info.open(Mymap,Mymarker);
+
+      google.maps.event.addListener(Mymarker, 'click', function() {
+
+            info = new google.maps.InfoWindow({
+            content: place + '<br>' + address + '<br>' + link,
+            maxWidth: 1000
+            });
+            info.open(Mymap,Mymarker);
+
+      });
+
+    });
+
+    document.getElementById("canvas").style.width = '100%';//　★地図の幅★
+}
+
+$(window).on("load resize", function() {
+	$('#canvas').css({'height': $(window).height() - $('footer').outerHeight()});
+});
+</script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script> 
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

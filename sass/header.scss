@@ -1,0 +1,264 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+header#top {
+	width			: $max;
+	background-color: $white;
+	overflow		: hidden;
+	display			: table;
+	padding			: 10px 10px $FS 10px;
+	overflow		: hidden;
+	
+	h1 {
+		display: table-cell;
+	}
+
+	#topnavi {
+		font-size		: 0.8em;
+		color			: #0033cc;
+		display			: table-cell;
+		text-align		: right;
+		vertical-align	: middle;
+		padding-top		: 0.5em;
+	
+			@include media($fh) {
+				padding-top: 0;
+			}
+		
+		li {
+			display		: inline;
+			margin-left : 2em;
+	
+			@include media($fh) {
+				display		 : block;
+				margin-bottom: -0.6em;
+			}
+		}
+	}
+}
+		
+#global {
+	@include abT(4.24rem,0,1);
+	color			: $white;
+	width			: $max;
+	background-color: $black;
+	box-shadow		: 0 1px 5px 0 rgba(0,0,0,0.6);
+	
+	@include media($fh) {
+		background: none;
+		box-shadow: none;
+	}
+	
+	&.fix {
+		@include fixT(0,0,5);
+		
+		@include media($fh) {
+			height: 550px;
+		}
+	}
+	
+	.new {
+		@include abR(0,0,2);
+		width			: 1.5em !important;
+		height			: 1.5em !important;
+		font-size		: 0.75em;
+		font-weight		: normal;
+		text-align		: center;
+		line-height		: 0.8em;
+		color			: $white;
+		background-color: #F00 !important;
+		border-radius	: 1.5em !important;
+		padding-top		: 0.4em !important;
+	}
+
+	h2 {
+		margin-left		: $max * 0.1;
+		background-color: $navy;
+	
+			@include media($fh) {
+				@include abT(0,0,5);
+				margin	: $max * 0.005;			
+				min-width	: 60px;
+				background	: none;
+			}
+		
+		img {
+			width	  : $max * 0.3;
+			min-width : 340px;
+			max-width : 484px;
+			height	  : auto;
+			margin-top: -0.3em;
+	
+			@include media($fh) {	
+				margin		: $max * 0.05;
+				width	 	: $max * 0.2;			
+				min-width	: 60px;
+			}
+		}
+	}
+	
+	& > dl {
+		display			: flex;
+		flex-flow		: row wrap;
+		justify-content	: center;
+		align-items		: stretch;
+		align-content	: flex-start;
+		width			: $max;
+		
+		@include media($fh) {
+			height:  550px;
+			overflow: auto;
+		}
+	
+		.menu-trigger,.menu-trigger span {
+			display		: block;
+			transition	: all .4s;
+			box-sizing	: border-box;
+		}
+		
+		.menu-trigger {
+			@include abT(0,0,1);
+			cursor			: pointer;
+			text-align		: center;
+			padding			: $max*0.008 $max*0.01;
+	
+			@include media($of) {
+				padding-top: $max*0.004;
+			}
+	
+			@include media($fh) {
+				left			: $max;
+				margin-left		: -4.3em;
+				padding			: $max*0.01;
+				background-color: $black;
+				font-size		: 0.75rem;
+			}
+			
+			span {
+				height			: 2px;
+				background-color: #fff;
+				border-radius	: 2px;
+				margin			: 0.7em;
+				width			: 2.5em;
+			}
+			
+			&.on {
+				background: none;
+				
+				span:nth-of-type(1) {
+					-webkit-transform: translateY(0.85em) rotate(-315deg);
+					transform: translateY(0.85em) rotate(-315deg);
+				}
+				
+				span:nth-of-type(2) {
+					opacity: 0;
+				}
+				
+				span:nth-of-type(3) {
+					-webkit-transform: translateY(-0.85em) rotate(315deg);
+					transform: translateY(-0.85em) rotate(315deg);
+				}
+			}
+			
+			i {
+				@include abT(32%,5em,0);
+				font-size	: 1.25em;
+				padding		: 0 5em 5em 0;
+				
+				@include media($of) {
+					@include abT(25%,4.2em,0);
+				}
+	
+					@include media($nf) {
+						display: none;
+					}
+			}
+		}
+		
+		& > dd {
+			padding			: 5em 1em;
+			display			: none;
+			vertical-align	: top;
+			width			: $max / 3;
+			flex			: 1 1 250px;
+				
+			@include media($fh) {
+				&:nth-of-type(1) {
+					padding: 7em 1em 1em;
+				}
+				
+				padding			: 2em 1em;
+				background-color: $black;
+			}
+			
+			&:nth-of-type(2) {
+				border-left: $white 1px dotted;
+				border-right: $white 1px dotted;
+				
+				@include media($fh) {
+					border: none;
+				}
+			}
+			
+			dl {
+				margin: 0 auto;
+				display: none;
+				
+				dt {
+					font-weight: bold;
+					margin-bottom: 1.5rem;
+					padding: 0.5rem;
+					border-top: $white 1px solid;
+					border-bottom: $white 1px solid;
+				}
+				
+				dd {
+					background: none;
+					margin: 0.5em 0 0 1.5em;
+					color: lighten($black , 45%);
+					position: $r;
+					
+					a {
+						color: $white;
+						
+						&.active {
+							color: $blue;
+							text-decoration: line-through; 
+						}
+					}
+						
+					span {
+						margin-right: 0.5rem;
+					}
+				}
+			}
+					
+			i {
+				font-style: normal;
+				font-family: century;
+				font-weight: normal;
+				font-size: 0.6rem;
+				margin-left: 1rem;
+
+				@include media($ot) {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	#live {
+		@include abR(-0.2em,0,2);
+		display: block;
+		width	  : $max * 0.15;
+		min-width : 180px;
+		max-width : 260px;
+		height	  : auto;
+		
+		@include media($fh) {
+			@include abR(-0.2em,5.4em,2);
+		}
+	}
+}

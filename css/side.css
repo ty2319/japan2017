@@ -1,0 +1,27 @@
+/* CSS Document */
+#side {
+  position: fixed;
+  bottom: 35%;
+  right: 0;
+  z-index: 6;
+  right: 0.5rem;
+  text-align: right;
+  font-size: 0.9rem;
+  display: none; }
+  #side li {
+    list-style: none;
+    line-height: 1.5rem; }
+    #side li a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 0.2rem;
+      cursor: pointer; }
+      #side li a span {
+        display: none; }
+  #side .on, #side .on a {
+    color: #2c7eff; }
+  @media all and (max-width: 500px) {
+    #side {
+      display: none !important; } }
+
+/*# sourceMappingURL=side.css.map */

@@ -1,0 +1,415 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+@keyframes load {
+	0% {
+		transform: translateY(50px) skewX(0);
+		opacity: 0;
+	}
+	
+	100% {
+		transform: translateY(0) skewX(-10deg);
+		opacity: 1;
+	}
+}
+
+article {
+	width		: $max;
+	background	: url(#{$ip}common/dot.png);
+	overflow	: hidden;
+	position	: $r;
+
+	#pan {
+		@include fixB(0,0,1);
+		display			: none;
+		padding			: 0.5em;
+		width			: $max;
+		color			: $white;
+		background-color: $modal4;
+	}
+	
+	@include media($fh) {
+		a {
+			position: $r;
+			z-index	: 5;
+		}
+	}
+	
+		header#title {
+			text-align	: center;
+			color		: $white !important;
+			padding		: 7em 0 0 0;
+			text-shadow : -1px -1px 3px $black, 1px 1px 3px $black;
+			animation	: load 1s 1;
+			transform	: skewX(-10deg);
+			
+				
+			h3 {
+				font-size	: 2.5em;
+				font-weight : normal;
+				
+				@include media($fh) {
+					font-size	: 1.5em;
+					line-height : 1.5em; 
+				}
+				
+				span {
+					display		 : block;
+					font-size	 : 3em;
+					margin-bottom: 0.3em;
+				}
+			}
+		
+			p {
+				margin-top	: 1em;
+				font-size	: 1.5em;
+				font-weight : normal;
+				
+				&#scroll {
+					margin	: 5em 0 0 3em;
+					cursor	: pointer;
+			
+					span {
+						display: block;
+						margin : -0.2em 0 0;
+					}
+				}
+			}
+		}
+		
+	.half {
+		width		: $max / 2 !important;
+		border-top	: none;
+		padding		: 2em $max*0.03 !important;
+		
+		&:nth-of-type(even) {
+			border-left : 1px dotted lighten($black,50%);
+		} 
+		
+		@include media($six) {
+			border-left : none !important;
+			border-top	: 1px dotted lighten($black,50%);
+			width		: $max !important;
+		
+			&:nth-of-type(odd) {
+				border-top : none;
+			} 
+		}
+	
+		dl,ul,p,table {
+			margin: 1em 0;
+		}
+	}
+		
+	.one_third {
+		width : $max / 3 !important;
+		
+		&:nth-of-type(3n-1) {
+			border-left	 : lighten($black,50%) dotted 1px;
+			border-right : lighten($black,50%) dotted 1px;
+			border-top	 : none;
+			border-bottom: none;
+		
+			@include media($nf) {
+				border-left		: none;
+				border-right	: none;
+				border-top		: lighten($black,50%) solid 1px;
+				border-bottom	: lighten($black,50%) solid 1px;
+			}
+		}
+		
+		@include media($nf) {
+			width: $max !important;
+		}
+		
+		h5 {
+			margin-top: 5em !important;
+		}
+		
+		p {
+			margin-bottom: 2em;
+		}
+		
+		img {
+			width: $max;
+			height: auto;
+		}
+	}
+	
+	.quarter {
+		width	: $max / 4 !important;
+		padding : 1em !important;
+		
+		&:nth-of-type(8n-1),&:nth-of-type(8n-3),&:nth-of-type(8n-4),&:nth-of-type(8n-6) {
+			background-color: lighten($modal,80%);
+		}
+		
+		&:nth-of-type(8n),&:nth-of-type(8n-2),&:nth-of-type(8n-5),&:nth-of-type(8n-7) {
+			background-color: lighten($modal2,80%);
+		}
+		
+		@include media($nf) {
+			width: $max / 2 !important;
+		
+			&:nth-of-type(4n-1),&:nth-of-type(4n-2) {
+				background-color: lighten($modal,80%);
+			}
+			
+			&:nth-of-type(4n),&:nth-of-type(4n-3) {
+				background-color: lighten($modal2,80%);
+			}
+		}
+		
+		@include media($six) {
+			width: $max !important;
+		
+			&:nth-of-type(even) {
+				background-color: lighten($modal,80%);
+			}
+			
+			&:nth-of-type(odd) {
+				background-color: lighten($modal2,80%);
+			}
+			
+			&:nth-of-type(even) {
+				padding-top: 5em !important;
+			}
+		}
+		
+		dl,p {
+			margin: 1em !important;
+		}
+		
+		img {
+			width: $max;
+			height: auto;
+			padding: 0 1em;
+		}
+	}
+	
+	div.contents {
+		width	: $max !important;
+		padding	: 0;
+		
+		&> img {
+			height: auto;
+			padding: 0 $max*0.03 5em 0 !important;
+			border: none;
+		}
+	}
+		
+	section header,div.contents header {
+		text-align	 : center;
+		margin-bottom: 7em;
+		color		 : $navy;
+		width		 : $max;
+		transform	 : skewX(-10deg);
+		
+		h4 {
+			font-size	: 2em;
+			line-height : $max;
+		}
+		
+		p {
+			margin		: 0.5em 0 0 !important;
+		}
+	}
+
+	.contents {
+		width			: $max;
+		background		: center top no-repeat fixed;
+		overflow		: hidden;
+		background-size : cover;
+		padding			: 8em $max*0.03;
+		display			: flex;
+		flex-flow		: row wrap;
+		
+		@for $value from 0 through 5 {
+			
+			&.bg#{$value} {
+				background-image: url(#{$ip}common/#{$value + 10}.png);
+			}
+		}
+		
+		hr {
+			width		 : $max;
+			display		 : block;
+			border-top	 : 1px dotted lighten($black,50%);
+			margin-bottom: 4em;
+		}
+		
+		& > p,& > dl {
+			width: $max;
+		}
+		
+		& > section,& > div {
+			width		: $max;
+			padding		: 5em 0;
+			background	: none;
+			
+			&:not(.half):not(.one_third):not(.quarter) {
+				border-top : #666 1px dotted;
+			}
+			
+			&.half {
+				margin-bottom: 4em;
+				padding		 : 1em 0;
+				
+				&:nth-of-type(odd) {
+					padding-right: $max * 0.03;
+				}
+				
+				&:nth-of-type(even) {
+					padding-left: $max * 0.03;
+					
+					@include media($six) {
+						padding-top: 5em !important;
+				
+						&:nth-of-type(odd) {
+							padding-right: $max * 0.0075;
+						}
+					
+						&:nth-of-type(even) {
+							padding-left: $max * 0.0075;
+						}
+					}
+				}
+			}
+			
+			&.one_third {
+				padding: 7em 2em;
+			}
+			
+			& > div {
+				display		: flex;
+				flex-flow	: row nowrap;
+				margin		: 1em 0;
+					
+				@include media($nf) {
+					flex-flow		: row wrap;
+					
+					dl {
+						margin-top: 1em !important;
+					}
+				}
+			}
+		}
+		
+		& > div {
+			margin-bottom: 4em;
+			
+			&:nth-of-type(odd) {
+				padding-right: $max * 0.03 !important;
+			}
+			
+			&:nth-of-type(even) {
+				padding-left: $max * 0.03 !important;
+			}
+		
+			img {
+				display		: block;
+				width		: $max;
+				height		: auto;
+				margin-top	: 1em;
+			}
+		}
+		
+		&> img:not(.one_third):not(.half) {
+			width: $max;
+			margin-bottom: 2em;
+		}
+	
+		.back_gray,.back_gray th,.back_gray td {
+			background-color: lighten($modal,80%);
+		}
+	
+		.back_white,.back_white th,.back_white td {
+			background-color: lighten($modal2,80%);
+		}
+		
+		figure {
+			 font-size: 0.8rem;
+			 line-height: 1rem;
+			 margin-bottom: 3rem;
+			 text-align: center;
+			 
+			 figcaption {
+				 margin-top: 0.5rem;
+			}
+		}
+				
+		h5,caption {
+			color		 : $navy;
+			margin-bottom: 1em;
+			padding		 : 0.5em;
+			font-size	 : 1.25em;
+			text-align	 : center;
+		}
+		
+		dl,.frame,.box {
+			padding: 1em;
+			border: #999 3px double !important;
+			overflow: hidden;
+			zoom: 1;
+			background-color: $modal2;
+			margin: 0.5em;
+		}
+		
+		dl:not(.half dl) {
+			margin: 0;
+		}
+						
+		dt {
+			color: $navy;
+			font-weight: bold;
+			clear: both;
+			text-align: center;
+			margin-top: 2em;
+			
+			&:first-child {
+				margin: 0;
+			}
+		}
+			
+		dd {
+			overflow: hidden;
+			text-align: center;
+			
+			a {
+				color: $blue;
+				
+				span {
+					margin-right: 0.5em;
+				}
+			}
+		}
+		
+		.box {
+			margin: 3em 0 !important;
+			
+			dt {
+				float		: left;
+				margin-top	: 0;
+				width		: 7em;
+				text-align	: right;
+			}
+		
+			dd {
+				text-align		: left;
+				margin			: 0 0 0.5em 0;
+				border-bottom	: #666 1px dotted;
+				padding-left	: 7em;
+				overflow		: visible;
+			
+				&:last-of-type {
+					border: none;
+				}
+			}
+		}
+	}
+	.center {
+		text-align: center;
+	}
+}

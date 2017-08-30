@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+.contents {
+	
+	.half {
+		overflow	: hidden;
+		text-align	: center;
+		order		: 2;
+		position	: $r;
+		
+		@include media($nf) {
+			order: 1;
+			width: $max !important;
+		}
+		
+		@include media($nf) {
+			border-bottom: 1px dotted lighten($black , 30%);
+		}
+		
+		h5 {
+			margin: 0;
+		}
+		
+		div {
+			display	  : flex;
+			flex-flow : row nowrap;
+			
+			section {
+				padding : 0;
+				
+				@include media($nf) {
+					margin-left: 1.5em;
+				}
+				
+				@include media($fh) {
+					margin-left: 1em;
+				}
+				
+				p {
+					margin: 0;
+				}
+			}
+		}
+		
+		ul {
+		
+			.prev {
+				@include abT(50em,1em,6);
+				display	: none;
+				
+				@include media($nf) {
+					margin-left: -1em;
+				}
+			}
+			
+			.next {
+				@include abR(50em,1em,6);
+				
+				@include media($nf) {
+					margin-right: -1em;
+				}
+			}
+			
+			a {
+				color: $navy;
+				
+				&:hover {
+					color: lighten($navy,30%);
+				}
+			}
+		}
+	}
+	
+	table {
+		border-collapse : collapse;
+		border			: lighten($black,70%) solid 1px;
+		width			: $max;
+		padding			: 0;
+		
+		&.quarter {
+		
+			@include media($nf) {
+				width: $max * 0.48 !important;
+			}
+			
+			@include media($fh) {
+				width: $max !important;
+			}
+			
+			&:nth-of-type(1) {
+				order: 1;
+		
+				@include media($nf) {
+					order		: 2;
+					margin-right: $max * 0.04;
+				}
+		
+				@include media($six) {
+					margin-bottom: 5em;
+				}
+			}
+			
+			&:nth-of-type(2) {
+				order: 3;
+			}
+		}
+		
+		caption span {
+			font-size: 1.25em;
+		}
+		
+		thead th {
+			background-color: lighten($modal,30%);
+			color: $white;
+		}
+	
+		th,td {
+			border-right: lighten($black,70%) dotted 1px;
+			padding		: 0.7em 0.5em;
+			text-align	: center;
+			width		: auto;
+		}
+		
+		&.battery {
+			border			: none;
+			width			: auto;
+			border-collapse	: separate;
+			border-spacing	: 0 0.5em;
+			margin-bottom	: 5em !important;
+			
+			th,td {
+				border		: none;
+				text-align	: left;
+				padding		: 0.4em;
+				line-height	: $max;
+			}
+			
+			.b_n {
+				background-color: $modal3;
+				color			: $white;
+			}
+			
+			.b_e {			
+				background-color: lighten($modal,30%);
+				color			: $white;
+			}
+		}
+		
+		&.score thead th {
+			background-color: $modal4;
+		}
+		
+		.current {
+			background-color: lighten($modal,10%) !important;
+			font-weight		: bold;
+			
+			a {
+				color: $white;
+			}
+		}
+		
+		&.blue {
+			
+			caption {
+				color: $blue !important;
+			}
+			
+			thead th {
+				background-color: $modal3;
+			}
+		}
+	
+		&.border {
+			caption {
+				color: lighten($black,40%) !important;
+			}
+		}
+		
+		.back_blue th,.back_blue td {
+			background-color: lighten($modal3,35%);
+		}			
+	}
+	
+	.ntt thead th {
+		background-color: $modal3;
+		color			: #FFF;
+	}
+	
+	.enemy thead th {
+		background-color: lighten($modal,30%);
+		color			: #FFF;
+	}
+}
