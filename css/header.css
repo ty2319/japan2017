@@ -31,9 +31,11 @@ header#top {
   top: 4.24rem;
   left: 0;
   z-index: 1;
+  background-color: rgba(1, 32, 82, 0.9);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052)";
   color: #fff;
   width: 100%;
-  background-color: #000;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6); }
   @media all and (max-width: 500px) {
     #global {
@@ -63,8 +65,8 @@ header#top {
     border-radius: 1.5em !important;
     padding-top: 0.4em !important; }
   #global h2 {
-    margin-left: 10%;
-    background-color: #012052; }
+    text-align: center;
+    margin: 0 auto -0.5em auto; }
     @media all and (max-width: 500px) {
       #global h2 {
         position: absolute;
@@ -77,9 +79,8 @@ header#top {
     #global h2 img {
       width: 30%;
       min-width: 340px;
-      max-width: 484px;
-      height: auto;
-      margin-top: -0.3em; }
+      max-width: 672px;
+      height: auto; }
       @media all and (max-width: 500px) {
         #global h2 img {
           margin: 5%;

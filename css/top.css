@@ -10,6 +10,8 @@ html {
     html body main {
       width: 100%;
       height: 100%; }
+      html body main > div {
+        width: 50%; }
       html body main ul {
         display: flex;
         flex-flow: column nowrap; }
@@ -18,6 +20,9 @@ html {
         padding: 0 5%; }
         html body main .slideFrame .slideCell {
           margin-bottom: 15%; }
+          html body main .slideFrame .slideCell img {
+            width: 100%;
+            height: auto; }
       html body main #schedule {
         position: absolute;
         top: 30%;

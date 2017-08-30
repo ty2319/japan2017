@@ -41,9 +41,9 @@ header#top {
 		
 #global {
 	@include abT(4.24rem,0,1);
+	@include Modal4;
 	color			: $white;
 	width			: $max;
-	background-color: $black;
 	box-shadow		: 0 1px 5px 0 rgba(0,0,0,0.6);
 	
 	@include media($fh) {
@@ -74,8 +74,8 @@ header#top {
 	}
 
 	h2 {
-		margin-left		: $max * 0.1;
-		background-color: $navy;
+		text-align		: center;
+		margin			: 0 auto -0.5em auto;
 	
 			@include media($fh) {
 				@include abT(0,0,5);
@@ -87,9 +87,8 @@ header#top {
 		img {
 			width	  : $max * 0.3;
 			min-width : 340px;
-			max-width : 484px;
+			max-width : 672px;
 			height	  : auto;
-			margin-top: -0.3em;
 	
 			@include media($fh) {	
 				margin		: $max * 0.05;
