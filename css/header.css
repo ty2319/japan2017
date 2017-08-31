@@ -1,219 +1,320 @@
 /* CSS Document */
+/* line 6, ../sass/header.scss */
 header#top {
   width: 100%;
   background-color: #fff;
   overflow: hidden;
   display: table;
   padding: 10px 10px 12px 10px;
-  overflow: hidden; }
-  header#top h1 {
-    display: table-cell; }
+  overflow: hidden;
+}
+/* line 14, ../sass/header.scss */
+header#top h1 {
+  display: table-cell;
+}
+/* line 18, ../sass/header.scss */
+header#top #topnavi {
+  font-size: 0.8em;
+  color: #0033cc;
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+  padding-top: 0.5em;
+}
+@media all and (max-width: 500px) {
+  /* line 18, ../sass/header.scss */
   header#top #topnavi {
-    font-size: 0.8em;
-    color: #0033cc;
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-    padding-top: 0.5em; }
-    @media all and (max-width: 500px) {
-      header#top #topnavi {
-        padding-top: 0; } }
-    header#top #topnavi li {
-      display: inline;
-      margin-left: 2em; }
-      @media all and (max-width: 500px) {
-        header#top #topnavi li {
-          display: block;
-          margin-bottom: -0.6em; } }
+    padding-top: 0;
+  }
+}
+/* line 30, ../sass/header.scss */
+header#top #topnavi li {
+  display: inline;
+  margin-left: 2em;
+}
+@media all and (max-width: 500px) {
+  /* line 30, ../sass/header.scss */
+  header#top #topnavi li {
+    display: block;
+    margin-bottom: -0.6em;
+  }
+}
 
+/* line 42, ../sass/header.scss */
 #global {
   position: absolute;
   top: 4.24rem;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: rgba(1, 32, 82, 0.9);
   filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052);
   -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052)";
   color: #fff;
   width: 100%;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6); }
-  @media all and (max-width: 500px) {
-    #global {
-      background: none;
-      box-shadow: none; } }
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+}
+@media all and (max-width: 500px) {
+  /* line 42, ../sass/header.scss */
+  #global {
+    background: none;
+    box-shadow: none;
+  }
+}
+/* line 54, ../sass/header.scss */
+#global.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+@media all and (max-width: 500px) {
+  /* line 54, ../sass/header.scss */
   #global.fix {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5; }
-    @media all and (max-width: 500px) {
-      #global.fix {
-        height: 550px; } }
-  #global .new {
+    height: 550px;
+  }
+}
+/* line 62, ../sass/header.scss */
+#global .new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 1.5em !important;
+  height: 1.5em !important;
+  font-size: 0.75em;
+  font-weight: normal;
+  text-align: center;
+  line-height: 0.8em;
+  color: #fff;
+  background-color: #F00 !important;
+  border-radius: 1.5em !important;
+  padding-top: 0.4em !important;
+}
+/* line 76, ../sass/header.scss */
+#global h2 {
+  text-align: center;
+  margin: 0 auto -0.5em auto;
+}
+@media all and (max-width: 500px) {
+  /* line 76, ../sass/header.scss */
+  #global h2 {
     position: absolute;
     top: 0;
-    right: 0;
-    z-index: 2;
-    width: 1.5em !important;
-    height: 1.5em !important;
-    font-size: 0.75em;
-    font-weight: normal;
-    text-align: center;
-    line-height: 0.8em;
-    color: #fff;
-    background-color: #F00 !important;
-    border-radius: 1.5em !important;
-    padding-top: 0.4em !important; }
-  #global h2 {
-    text-align: center;
-    margin: 0 auto -0.5em auto; }
-    @media all and (max-width: 500px) {
-      #global h2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        margin: 0.5%;
-        min-width: 60px;
-        background: none; } }
-    #global h2 img {
-      width: 30%;
-      min-width: 340px;
-      max-width: 672px;
-      height: auto; }
-      @media all and (max-width: 500px) {
-        #global h2 img {
-          margin: 5%;
-          width: 20%;
-          min-width: 60px; } }
+    left: 0;
+    z-index: 5;
+    margin: 0.5%;
+    min-width: 60px;
+    background: none;
+  }
+}
+/* line 87, ../sass/header.scss */
+#global h2 img {
+  width: 30%;
+  min-width: 340px;
+  max-width: 672px;
+  height: auto;
+}
+@media all and (max-width: 500px) {
+  /* line 87, ../sass/header.scss */
+  #global h2 img {
+    margin: 5%;
+    width: 20%;
+    min-width: 60px;
+  }
+}
+/* line 101, ../sass/header.scss */
+#global > dl {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  width: 100%;
+}
+@media all and (max-width: 500px) {
+  /* line 101, ../sass/header.scss */
   #global > dl {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-    align-content: flex-start;
-    width: 100%; }
-    @media all and (max-width: 500px) {
-      #global > dl {
-        height: 550px;
-        overflow: auto; } }
-    #global > dl .menu-trigger, #global > dl .menu-trigger span {
-      display: block;
-      transition: all .4s;
-      box-sizing: border-box; }
-    #global > dl .menu-trigger {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      cursor: pointer;
-      text-align: center;
-      padding: 0.8% 1%; }
-      @media all and (max-width: 1500px) {
-        #global > dl .menu-trigger {
-          padding-top: 0.4%; } }
-      @media all and (max-width: 500px) {
-        #global > dl .menu-trigger {
-          left: 100%;
-          margin-left: -4.3em;
-          padding: 1%;
-          background-color: #000;
-          font-size: 0.75rem; } }
-      #global > dl .menu-trigger span {
-        height: 2px;
-        background-color: #fff;
-        border-radius: 2px;
-        margin: 0.7em;
-        width: 2.5em; }
-      #global > dl .menu-trigger.on {
-        background: none; }
-        #global > dl .menu-trigger.on span:nth-of-type(1) {
-          -webkit-transform: translateY(0.85em) rotate(-315deg);
-          transform: translateY(0.85em) rotate(-315deg); }
-        #global > dl .menu-trigger.on span:nth-of-type(2) {
-          opacity: 0; }
-        #global > dl .menu-trigger.on span:nth-of-type(3) {
-          -webkit-transform: translateY(-0.85em) rotate(315deg);
-          transform: translateY(-0.85em) rotate(315deg); }
-      #global > dl .menu-trigger i {
-        position: absolute;
-        top: 32%;
-        left: 5em;
-        z-index: 0;
-        font-size: 1.25em;
-        padding: 0 5em 5em 0; }
-        @media all and (max-width: 1500px) {
-          #global > dl .menu-trigger i {
-            position: absolute;
-            top: 25%;
-            left: 4.2em;
-            z-index: 0; } }
-        @media all and (max-width: 940px) {
-          #global > dl .menu-trigger i {
-            display: none; } }
-    #global > dl > dd {
-      padding: 5em 1em;
-      display: none;
-      vertical-align: top;
-      width: 33.33333%;
-      flex: 1 1 250px; }
-      @media all and (max-width: 500px) {
-        #global > dl > dd {
-          padding: 2em 1em;
-          background-color: #000; }
-          #global > dl > dd:nth-of-type(1) {
-            padding: 7em 1em 1em; } }
-      #global > dl > dd:nth-of-type(2) {
-        border-left: #fff 1px dotted;
-        border-right: #fff 1px dotted; }
-        @media all and (max-width: 500px) {
-          #global > dl > dd:nth-of-type(2) {
-            border: none; } }
-      #global > dl > dd dl {
-        margin: 0 auto;
-        display: none; }
-        #global > dl > dd dl dt {
-          font-weight: bold;
-          margin-bottom: 1.5rem;
-          padding: 0.5rem;
-          border-top: #fff 1px solid;
-          border-bottom: #fff 1px solid; }
-        #global > dl > dd dl dd {
-          background: none;
-          margin: 0.5em 0 0 1.5em;
-          color: #737373;
-          position: relative; }
-          #global > dl > dd dl dd a {
-            color: #fff; }
-            #global > dl > dd dl dd a.active {
-              color: #2c7eff;
-              text-decoration: line-through; }
-          #global > dl > dd dl dd span {
-            margin-right: 0.5rem; }
-      #global > dl > dd i {
-        font-style: normal;
-        font-family: century;
-        font-weight: normal;
-        font-size: 0.6rem;
-        margin-left: 1rem; }
-        @media all and (max-width: 1200px) {
-          #global > dl > dd i {
-            display: none; } }
+    height: 550px;
+    overflow: auto;
+  }
+}
+/* line 114, ../sass/header.scss */
+#global > dl .menu-trigger, #global > dl .menu-trigger span {
+  display: block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+/* line 120, ../sass/header.scss */
+#global > dl .menu-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.8% 1%;
+}
+@media all and (max-width: 1500px) {
+  /* line 120, ../sass/header.scss */
+  #global > dl .menu-trigger {
+    padding-top: 0.4%;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 120, ../sass/header.scss */
+  #global > dl .menu-trigger {
+    left: 100%;
+    margin-left: -4.3em;
+    padding: 1%;
+    background-color: #000;
+    font-size: 0.75rem;
+  }
+}
+/* line 138, ../sass/header.scss */
+#global > dl .menu-trigger span {
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  margin: 0.7em;
+  width: 2.5em;
+}
+/* line 146, ../sass/header.scss */
+#global > dl .menu-trigger.on {
+  background: none;
+}
+/* line 149, ../sass/header.scss */
+#global > dl .menu-trigger.on span:nth-of-type(1) {
+  -webkit-transform: translateY(0.85em) rotate(-315deg);
+  transform: translateY(0.85em) rotate(-315deg);
+}
+/* line 154, ../sass/header.scss */
+#global > dl .menu-trigger.on span:nth-of-type(2) {
+  opacity: 0;
+}
+/* line 158, ../sass/header.scss */
+#global > dl .menu-trigger.on span:nth-of-type(3) {
+  -webkit-transform: translateY(-0.85em) rotate(315deg);
+  transform: translateY(-0.85em) rotate(315deg);
+}
+/* line 164, ../sass/header.scss */
+#global > dl .menu-trigger i {
+  position: absolute;
+  top: 32%;
+  left: 5em;
+  z-index: 0;
+  font-size: 1.25em;
+  padding: 0 5em 5em 0;
+}
+@media all and (max-width: 1500px) {
+  /* line 164, ../sass/header.scss */
+  #global > dl .menu-trigger i {
+    position: absolute;
+    top: 25%;
+    left: 4.2em;
+    z-index: 0;
+  }
+}
+@media all and (max-width: 940px) {
+  /* line 164, ../sass/header.scss */
+  #global > dl .menu-trigger i {
+    display: none;
+  }
+}
+/* line 179, ../sass/header.scss */
+#global > dl > dd {
+  padding: 5em 1em;
+  display: none;
+  vertical-align: top;
+  width: 33.33333%;
+  flex: 1 1 250px;
+}
+@media all and (max-width: 500px) {
+  /* line 179, ../sass/header.scss */
+  #global > dl > dd {
+    padding: 2em 1em;
+    background-color: #000;
+  }
+  /* line 187, ../sass/header.scss */
+  #global > dl > dd:nth-of-type(1) {
+    padding: 7em 1em 1em;
+  }
+}
+/* line 195, ../sass/header.scss */
+#global > dl > dd:nth-of-type(2) {
+  border-left: #fff 1px dotted;
+  border-right: #fff 1px dotted;
+}
+@media all and (max-width: 500px) {
+  /* line 195, ../sass/header.scss */
+  #global > dl > dd:nth-of-type(2) {
+    border: none;
+  }
+}
+/* line 204, ../sass/header.scss */
+#global > dl > dd dl {
+  margin: 0 auto;
+  display: none;
+}
+/* line 208, ../sass/header.scss */
+#global > dl > dd dl dt {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border-top: #fff 1px solid;
+  border-bottom: #fff 1px solid;
+}
+/* line 216, ../sass/header.scss */
+#global > dl > dd dl dd {
+  background: none;
+  margin: 0.5em 0 0 1.5em;
+  color: #737373;
+  position: relative;
+}
+/* line 222, ../sass/header.scss */
+#global > dl > dd dl dd a {
+  color: #fff;
+}
+/* line 225, ../sass/header.scss */
+#global > dl > dd dl dd a.active {
+  color: #2c7eff;
+  text-decoration: line-through;
+}
+/* line 231, ../sass/header.scss */
+#global > dl > dd dl dd span {
+  margin-right: 0.5rem;
+}
+/* line 237, ../sass/header.scss */
+#global > dl > dd i {
+  font-style: normal;
+  font-family: century;
+  font-weight: normal;
+  font-size: 0.6rem;
+  margin-left: 1rem;
+}
+@media all and (max-width: 1200px) {
+  /* line 237, ../sass/header.scss */
+  #global > dl > dd i {
+    display: none;
+  }
+}
+/* line 251, ../sass/header.scss */
+#global #live {
+  position: absolute;
+  top: -0.2em;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 15%;
+  min-width: 180px;
+  max-width: 260px;
+  height: auto;
+}
+@media all and (max-width: 500px) {
+  /* line 251, ../sass/header.scss */
   #global #live {
     position: absolute;
     top: -0.2em;
-    right: 0;
+    right: 5.4em;
     z-index: 2;
-    display: block;
-    width: 15%;
-    min-width: 180px;
-    max-width: 260px;
-    height: auto; }
-    @media all and (max-width: 500px) {
-      #global #live {
-        position: absolute;
-        top: -0.2em;
-        right: 5.4em;
-        z-index: 2; } }
-
-/*# sourceMappingURL=header.css.map */
+  }
+}

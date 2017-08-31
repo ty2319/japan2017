@@ -21,6 +21,17 @@ $(function() {
 		i++;
 	});
 	
+	var num = $('section').length-1;
+	
+	$('article').css('margin-left' , $('section').outerWidth() * -num);
+	
+	$('#schedule li').on('click' , function() {
+		$('#schedule li').removeClass('current');
+		var cur = $('#schedule li').index(this);
+		$('article').animate({marginLeft: $('section').outerWidth() * -cur} , 'slow');
+		$(this).addClass('current');
+	});
+	
 	// 使用例
 	$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
 		$(json).each(function(i, data) {
@@ -65,21 +76,8 @@ $(function() {
 $(window).on('load resize' , function() {
 	
 	if ($(window).width() > 600) {
-		$('main,article').outerHeight($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
-		$('article').css('padding-top' , $('#global').outerHeight() - 1);
+		$('main > div , .slideFrame').outerHeight($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
 	} else {
-		$('article').css('padding-top' , $('article > div').height());
 		$('body').css('height' , 'auto');
 	}
-	
-	var num = $('section').length-1;
-	
-	$('article').css('margin-left' , $('section').outerWidth() * -num);
-	
-	$('#schedule li').on('click' , function() {
-		$('#schedule li').removeClass('current');
-		var cur = $('#schedule li').index(this);
-		$('article').animate({marginLeft: $('section').outerWidth() * -cur} , 'slow');
-		$(this).addClass('current');
-	});
 });

@@ -16,116 +16,172 @@ html {
 		}
 			
 		main {
-			width	: $max;
-			height	: $max;
+			display: flex;
+			flex-flow: row nowrap;
 			
 			& > div {
-				width: $max / 2;
-			}
-			
-			ul {
-				display: flex;
-				flex-flow: column nowrap;
-			}
-			
-			.slideFrame {
-				background	: $black;
-				padding		: 0 $max*0.05;
+				width	: $max / 2;
+				overflow: hidden;
+				position: $r;
 				
-				.slideCell {
-					margin-bottom:  $max * 0.15;
+				&:nth-child(2) {
+					background	: url(#{$ip}top/back.jpg) no-repeat;
+					background-size: cover;
+				}
+			
+				&.slideFrame {
+					background	: $black;
+					padding		: 0 $max*0.05;
+					overflow	: hidden;
 					
-					img {
-						width : $max;
-						height: auto;
+					.slideCell {
+						padding-bottom: $max * 0.15;
+						overflow	  : hidden;
+						
+						img {
+							width : $max;
+							height: auto;
+						}
+					}
+					
+					.slideCtrl {
+						position: absolute;
+						color: #fff;
+						font-weight: bold;
+						text-align: center;
+						cursor: pointer;
+						top: 48%;
+					}
+					
+					.slideCtrl.left, .slideCtrl.right {
+						top: 0;
+						width: 90px;
+						height: 100%;
+					}
+					
+					.slideCtrl.left {
+						left: 0;
+					}
+					
+					.slideCtrl.right {
+						right: 0;
+					}
+					
+					.slideCtrl.up {
+						left: $max * 0.02;
+					}
+					
+					.slideCtrl.down {
+						right: $max * 0.02;
 					}
 				}
-			}
 			
-			#schedule {
-				@include abR(30%,0,1);
-				
-				li {
-					background	: $navy;
-					display		: inline-block;
-					height		: 5em;
-					margin-top	: 0.5em;
-					position	: $r;
-					width		: 5em;
-					transform	: rotate(-90deg);
-					color		: $white;
-					padding		: 1em 0.3em 0 0;
-					text-align	: center;
-					font-weight	: bold;
-					cursor		: pointer;
+				ul {
+					display: flex;
+					flex-flow: column nowrap;
 					
-					&:before {
-						border-bottom	: 1.5em solid $navy;
-						border-left		: 2.5em solid transparent;
-						border-right	: 2.5em solid transparent;
-						content			: "";
-						height			: 0;
-						left			: 0;
-						width			: 0;
-						@include abT(-1.5em,0,1);
-					}
-					
-					span {
-						display: inline-block;
-						transform:rotate(90deg);
-					}
-					
-					&:hover,&.current {
-						background	: $white;
-						color		: $navy;
-					
-						&:before {
-							border-bottom	: 1.5em solid $white;
+					&#schedule {
+						@include abR(30%,0,1);
+						
+						li {
+							background	: $navy;
+							display		: inline-block;
+							height		: 4.5em;
+							margin		: 0.5em 0 0;
+							position	: $r;
+							width		: 4.5em;
+							transform	: rotate(-90deg);
+							color		: $white;
+							padding		: 0.3em 0 0 0.3em;
+							text-align	: center;
+							font-size	: 0.8em;
+							font-weight	: bold;
+							line-height	: 1.5em !important;
+							cursor		: pointer;
+							
+							&:before {
+								border-bottom	: 1.5em solid $navy;
+								border-left		: 2.25em solid transparent;
+								border-right	: 2.25em solid transparent;
+								content			: "";
+								height			: 0;
+								left			: 0;
+								width			: 0;
+								@include abT(-1.5em,0,0);
+							}
+							
+							span {
+								display: inline-block;
+								transform:rotate(90deg);
+							}
+							
+							&:hover,&.current {
+								background	: $white;
+								color		: $navy;
+							
+								&:before {
+									border-bottom	: 1.5em solid $white;
+								}
+							}
 						}
 					}
 				}
-			}
 			
-			article {
-				overflow: hidden;
-				width	: $max * 5;
-				
-				.contents {
-					height: $max;
-					padding: $max*0.025  $max*0.015;
+				article {
+					display		: flex;
+					flex-flow	: row nowrap;
+					overflow	: hidden;
+					width		: $max * 5;
+					background	: none;
 					
-					p {
-						color: $white;
-					}
-					
-					ol {
-						display: flex;
-						flex-flow: row nowrap;
-					}
+					.contents {
+						padding		: $max*0.025  $max*0.015;
+						background	: none !important;
+						overflow	: auto;
 						
-					a {
-						margin : 2em auto 0 auto;
+						h3 img {
+							width : $max;
+							height: auto;
+						}
 						
-						button {
-							color			: lighten($black,20%);
-							background-color: $white;
-							display			: block;
-							padding			: 1em;
-							text-align		: center;
-							opacity			: 0.7;
-							overflow		: hidden;
-							cursor			: pointer;
-							border			: none;
-							width			: $max / 2.5;
-							min-width		: 250px;
-							transition		: all 1s;
+						p {
+							width	: $max;
+							padding : 2em;
+							color	: $white;
+							white-space: normal;
+						}
 						
-							&:hover {
-								opacity: 1;
-							}
-						
-							span {
-								margin-right: 1em;
+						ol {
+							display			: flex;
+							flex-flow		: row wrap;
+							justify-content : space-around !important;
+							list-style		: none;
+						}
+							
+						a {
+							margin : 2em auto 0 auto;
+							
+							button {
+								color			: lighten($black,20%);
+								background-color: $white;
+								display			: block;
+								padding			: 1em;
+								text-align		: center;
+								opacity			: 0.7;
+								overflow		: hidden;
+								cursor			: pointer;
+								border			: none;
+								width			: $max / 2.5;
+								min-width		: 250px;
+								transition		: all 1s;
+							
+								&:hover {
+									opacity: 1;
+								}
+							
+								span {
+									margin-right: 1em;
+								}
 							}
 						}
 					}
