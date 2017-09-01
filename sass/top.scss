@@ -86,10 +86,10 @@ html {
 						li {
 							background	: $navy;
 							display		: inline-block;
-							height		: 4.5em;
+							height		: 4.3em;
 							margin		: 0.5em 0 0;
 							position	: $r;
-							width		: 4.5em;
+							width		: 4.3em;
 							transform	: rotate(-90deg);
 							color		: $white;
 							padding		: 0.3em 0 0 0.3em;
@@ -101,8 +101,8 @@ html {
 							
 							&:before {
 								border-bottom	: 1.5em solid $navy;
-								border-left		: 2.25em solid transparent;
-								border-right	: 2.25em solid transparent;
+								border-left		: 2.15em solid transparent;
+								border-right	: 2.15em solid transparent;
 								content			: "";
 								height			: 0;
 								left			: 0;
@@ -135,9 +135,10 @@ html {
 					background	: none;
 					
 					.contents {
-						padding		: $max*0.025  $max*0.015;
 						background	: none !important;
-						overflow	: auto;
+						overflow-y	: auto;
+						width		: $max / 5;
+						padding		: 8em $max*0.015 0 $max*0.015;
 						
 						h3 img {
 							width : $max;
@@ -145,17 +146,16 @@ html {
 						}
 						
 						p {
-							width	: $max;
 							padding : 2em;
 							color	: $white;
-							white-space: normal;
 						}
 						
 						ol {
 							display			: flex;
 							flex-flow		: row wrap;
-							justify-content : space-around !important;
+							justify-content : space-around;
 							list-style		: none;
+							width			: $max;
 						}
 							
 						a {

@@ -92,10 +92,10 @@ html body main > div ul#schedule {
 html body main > div ul#schedule li {
   background: #012052;
   display: inline-block;
-  height: 4.5em;
+  height: 4.3em;
   margin: 0.5em 0 0;
   position: relative;
-  width: 4.5em;
+  width: 4.3em;
   transform: rotate(-90deg);
   color: #fff;
   padding: 0.3em 0 0 0.3em;
@@ -108,8 +108,8 @@ html body main > div ul#schedule li {
 /* line 102, ../sass/top.scss */
 html body main > div ul#schedule li:before {
   border-bottom: 1.5em solid #012052;
-  border-left: 2.25em solid transparent;
-  border-right: 2.25em solid transparent;
+  border-left: 2.15em solid transparent;
+  border-right: 2.15em solid transparent;
   content: "";
   height: 0;
   left: 0;
@@ -143,28 +143,28 @@ html body main > div article {
 }
 /* line 137, ../sass/top.scss */
 html body main > div article .contents {
-  padding: 2.5% 1.5%;
   background: none !important;
-  overflow: auto;
+  overflow-y: auto;
+  width: 20%;
+  padding: 8em 1.5% 0 1.5%;
 }
-/* line 142, ../sass/top.scss */
+/* line 143, ../sass/top.scss */
 html body main > div article .contents h3 img {
   width: 100%;
   height: auto;
 }
-/* line 147, ../sass/top.scss */
+/* line 148, ../sass/top.scss */
 html body main > div article .contents p {
-  width: 100%;
   padding: 2em;
   color: #fff;
-  white-space: normal;
 }
-/* line 154, ../sass/top.scss */
+/* line 153, ../sass/top.scss */
 html body main > div article .contents ol {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around !important;
+  justify-content: space-around;
   list-style: none;
+  width: 100%;
 }
 /* line 161, ../sass/top.scss */
 html body main > div article .contents a {

@@ -1,24 +1,32 @@
 /* CSS Document */
+/* line 6, ../sass/footer.scss */
 footer {
   color: #fff;
   font-size: 0.8em;
-  clear: both; }
-  footer ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: stretch;
-    align-content: flex-start;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px 10px 0.5em 10px;
-    background-color: #000; }
-    footer ul li {
-      flex: 1 1 200px; }
-      footer ul li a {
-        color: #FFF; }
-      footer ul li small {
-        display: block;
-        text-align: right; }
-
-/*# sourceMappingURL=footer.css.map */
+  clear: both;
+}
+/* line 11, ../sass/footer.scss */
+footer ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 10px 0.5em 10px;
+  background-color: #012052;
+}
+/* line 22, ../sass/footer.scss */
+footer ul li {
+  flex: 1 1 200px;
+}
+/* line 25, ../sass/footer.scss */
+footer ul li a {
+  color: #FFF;
+}
+/* line 29, ../sass/footer.scss */
+footer ul li small {
+  display: block;
+  text-align: right;
+}

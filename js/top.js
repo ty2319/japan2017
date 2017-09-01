@@ -26,10 +26,14 @@ $(function() {
 	$('article').css('margin-left' , $('section').outerWidth() * -num);
 	
 	$('#schedule li').on('click' , function() {
-		$('#schedule li').removeClass('current');
 		var cur = $('#schedule li').index(this);
-		$('article').animate({marginLeft: $('section').outerWidth() * -cur} , 'slow');
-		$(this).addClass('current');
+		
+		if (num >= cur) {
+			
+			$('#schedule li').removeClass('current');
+			$('article').animate({marginLeft: $('section').outerWidth() * -cur} , 'slow');
+			$(this).addClass('current');
+		}
 	});
 	
 	// 使用例
