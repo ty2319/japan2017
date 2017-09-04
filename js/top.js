@@ -1,7 +1,13 @@
 $(function() {
 	
-	$(".slideFrame").slider({
+	$(".column").slider({
 		direction: "up",
+		time: 10,
+		speed: 5
+	});
+	
+	$(".row").slider({
+		direction: "left",
 		time: 10,
 		speed: 5
 	});
@@ -81,7 +87,16 @@ $(window).on('load resize' , function() {
 	
 	if ($(window).width() > 600) {
 		$('main > div , .slideFrame').outerHeight($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
+		$('.slideFrame').attr('class' , 'slideFrame column');
+		$('.slideFrame > ul').attr('class' , 'slideGuide up');
+		$('.slideCtrl:first').attr('class' , 'slideCtrl up').html('↑<br />prev')
+		$('.slideCtrl:last').attr('class' , 'slideCtrl down').html('next<br />↓');
 	} else {
-		$('body').css('height' , 'auto');
+		$('body , main > div').css('height' , 'auto');
+		$('.slideFrame').outerHeight($(window).height() / 2);
+		$('.slideFrame').attr('class' , 'slideFrame row');
+		$('.slideFrame > ul').attr('class' , 'slideGuide left');
+		$('.slideCtrl:first').attr('class' , 'slideCtrl left').html('← prev')
+		$('.slideCtrl:last').attr('class' , 'slideCtrl right').html('next →');
 	}
 });

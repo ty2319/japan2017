@@ -18,11 +18,19 @@ html {
 		main {
 			display: flex;
 			flex-flow: row nowrap;
+				
+			@include media($six) {
+				flex-flow: column wrap;
+			}
 			
 			& > div {
 				width	: $max / 2;
 				overflow: hidden;
 				position: $r;
+				
+				@include media($six) {
+					width: $max;
+				}
 				
 				&:nth-child(2) {
 					background	: url(#{$ip}top/back.jpg) no-repeat;
@@ -44,6 +52,18 @@ html {
 						}
 					}
 					
+					@include media($six) {
+						padding	: $max*0.05;
+						
+						.slideGuide {
+							flex-flow: row nowrap;
+							
+							.slideCell {
+								padding	: 0 $max*0.15 0 0;
+							}
+						}
+					}
+					
 					.slideCtrl {
 						position: absolute;
 						color: #fff;
@@ -54,17 +74,15 @@ html {
 					}
 					
 					.slideCtrl.left, .slideCtrl.right {
-						top: 0;
-						width: 90px;
-						height: 100%;
+						top: $max / 2;
 					}
 					
 					.slideCtrl.left {
-						left: 0;
+						left: $max * 0.01;
 					}
 					
 					.slideCtrl.right {
-						right: 0;
+						right: $max * 0.01;
 					}
 					
 					.slideCtrl.up {
