@@ -49,6 +49,18 @@
 		};
 
 		return this.each(function() {
+			
+			$(window).on('load resize' , function() {
+				if ($(window).width() > 600) {
+					def.direction	= "up";
+					def.time		= 10;
+					def.speed		= 5;
+				} else {
+					def.direction	= "left";
+					def.time		= 30;
+					def.speed		= 5;
+				}
+			});
 
 			// プライベート用のプロパティの上書き禁止
 			if (param) {
