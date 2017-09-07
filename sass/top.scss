@@ -16,107 +16,198 @@ html {
 		}
 			
 		main {
-			width	: $max;
-			height	: $max;
-			
-			ul {
-				display: flex;
-				flex-flow: column nowrap;
+			display: flex;
+			flex-flow: row nowrap;
+				
+			@include media($six) {
+				flex-flow: column wrap;
 			}
 			
-			.slideFrame {
-				background	: $black;
-				padding		: 0 $max*0.05;
+			& > div {
+				width	: $max / 2;
+				overflow: hidden;
+				position: $r;
 				
-				.slideCell {
-					margin-bottom:  $max * 0.15;
+				@include media($six) {
+					width: $max;
 				}
-			}
-			
-			#schedule {
-				@include abR(30%,0,1);
 				
-				li {
-					background	: $navy;
-					display		: inline-block;
-					height		: 5em;
-					margin-top	: 0.5em;
-					position	: $r;
-					width		: 5em;
-					transform	: rotate(-90deg);
-					color		: $white;
-					padding		: 1em 0.3em 0 0;
-					text-align	: center;
-					font-weight	: bold;
-					cursor		: pointer;
+				&:nth-child(2) {
+					background	: url(#{$ip}top/back.jpg) no-repeat;
+					background-size: cover;
+				}
+			
+				&.slideFrame {
+					background	: $black;
+					padding		: 0 $max*0.05;
+					overflow	: hidden;
 					
-					&:before {
-						border-bottom	: 1.5em solid $navy;
-						border-left		: 2.5em solid transparent;
-						border-right	: 2.5em solid transparent;
-						content			: "";
-						height			: 0;
-						left			: 0;
-						width			: 0;
-						@include abT(-1.5em,0,1);
+					.slideCell {
+						width			: $max;
+						padding-bottom	: $max * 0.15;
+						overflow		: hidden;
+						
+						img {
+							width : $max;
+							height: auto;
+						}
 					}
 					
-					span {
-						display: inline-block;
-						transform:rotate(90deg);
+					@include media($six) {
+						padding	: $max*0.1 0;
+						
+						.slideGuide {
+							flex-flow: row nowrap;
+							
+							.slideCell {
+								padding	: 0 20px 0 0;
+						
+								img {
+									width : 180px;
+									height: 320px;
+								}
+							}
+						}
 					}
 					
-					&:hover,&.current {
-						background	: $white;
-						color		: $navy;
+					.slideCtrl {
+						position	: absolute;
+						color		: #fff;
+						font-weight	: bold;
+						text-align	: center;
+						cursor		: pointer;
+						top			: $max * 0.48;
+						z-index		: 6;
+					}
 					
-						&:before {
-							border-bottom	: 1.5em solid $white;
+					.slideCtrl.left, .slideCtrl.right {
+						top: $max / 2;
+					}
+					
+					.slideCtrl.left {
+						left: $max * 0.01;
+					}
+					
+					.slideCtrl.right {
+						right: $max * 0.01;
+					}
+					
+					.slideCtrl.up {
+						left: $max * 0.02;
+					}
+					
+					.slideCtrl.down {
+						right: $max * 0.02;
+					}
+				}
+			
+				ul {
+					display: flex;
+					flex-flow: column nowrap;
+					
+					&#schedule {
+						@include abR(30%,0,6);
+						
+						li {
+							background	: $navy;
+							display		: inline-block;
+							height		: 4.3em;
+							margin		: 0.5em 0 0;
+							position	: $r;
+							width		: 4.3em;
+							transform	: rotate(-90deg);
+							color		: $white;
+							padding		: 0.3em 0 0 0.3em;
+							text-align	: center;
+							font-size	: 0.8em;
+							font-weight	: bold;
+							line-height	: 1.5em !important;
+							cursor		: pointer;
+							
+							&:before {
+								border-bottom	: 1.5em solid $navy;
+								border-left		: 2.15em solid transparent;
+								border-right	: 2.15em solid transparent;
+								content			: "";
+								height			: 0;
+								left			: 0;
+								width			: 0;
+								@include abT(-1.5em,0,0);
+							}
+							
+							span {
+								display: inline-block;
+								transform:rotate(90deg);
+							}
+							
+							&:hover,&.current {
+								background	: $white;
+								color		: $navy;
+							
+								&:before {
+									border-bottom	: 1.5em solid $white;
+								}
+							}
 						}
 					}
 				}
-			}
 			
-			article {
-				overflow: hidden;
-				width	: $max * 5;
-				
-				.contents {
-					height: $max;
-					padding: $max*0.025  $max*0.015;
+				article {
+					display		: flex;
+					flex-flow	: row nowrap;
+					overflow	: hidden;
+					width		: $max * 5;
+					background	: none;
 					
-					p {
-						color: $white;
-					}
-					
-					ol {
-						display: flex;
-						flex-flow: row nowrap;
-					}
+					.contents {
+						background	: none !important;
+						overflow-y	: auto;
+						width		: $max / 5;
+						padding		: 8em $max*0.015 0 $max*0.015;
 						
-					a {
-						margin : 2em auto 0 auto;
+						h3 img {
+							width : $max;
+							height: auto;
+						}
 						
-						button {
-							color			: lighten($black,20%);
-							background-color: $white;
-							display			: block;
-							padding			: 1em;
-							text-align		: center;
-							opacity			: 0.7;
-							overflow		: hidden;
-							cursor			: pointer;
-							border			: none;
-							width			: $max / 2.5;
-							min-width		: 250px;
-							transition		: all 1s;
+						p {
+							padding : 2em;
+							color	: $white;
+						}
 						
-							&:hover {
-								opacity: 1;
-							}
-						
-							span {
-								margin-right: 1em;
+						ol {
+							display			: flex;
+							flex-flow		: row wrap;
+							justify-content : space-around;
+							list-style		: none;
+							width			: $max;
+						}
+							
+						a {
+							margin : 2em auto 0 auto;
+							
+							button {
+								color			: lighten($black,20%);
+								background-color: $white;
+								display			: block;
+								margin-bottom	: 1em;
+								padding			: 1em;
+								text-align		: center;
+								opacity			: 0.7;
+								overflow		: hidden;
+								cursor			: pointer;
+								border			: none;
+								width			: $max / 2.5;
+								min-width		: 250px;
+								transition		: all 1s;
+							
+								&:hover {
+									opacity: 1;
+								}
+							
+								span {
+									margin-right: 1em;
+								}
 							}
 						}
 					}

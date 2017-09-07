@@ -49,6 +49,18 @@
 		};
 
 		return this.each(function() {
+			
+			$(window).on('load resize' , function() {
+				if ($(window).width() > 600) {
+					def.direction	= "up";
+					def.time		= 10;
+					def.speed		= 5;
+				} else {
+					def.direction	= "left";
+					def.time		= 30;
+					def.speed		= 5;
+				}
+			});
 
 			// プライベート用のプロパティの上書き禁止
 			if (param) {
@@ -339,7 +351,7 @@
 							def.sp = def.speed;
 							switch (true) {
 								case $(this).hasClass("right"):
-									def.direction = "right";
+									def.direction = "left";
 									break;
 								case $(this).hasClass("up"):
 									def.direction = "up";
@@ -349,7 +361,7 @@
 									break;
 								case $(this).hasClass("left"):
 								default:
-								   def.direction = "left";
+								   def.direction = "right";
 							}
 							slider(def);
 						}).bind(def.handlerMouseup, function() {
@@ -384,7 +396,11 @@
 						function() {
 							def.guide.stop(true).find(def.cell).stop(true);
 							def.sp = 1;
-							def.direction = def.d;
+							if ($(window).width() > 600) {
+								def.direction = "up";
+							} else {
+								def.direction = def.d;
+							}
 							if (def.auto) slider(def);
 						}
 					);

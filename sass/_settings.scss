@@ -60,7 +60,7 @@ $modal3: rgba(#2c7eff,0.8);
 $modal4: rgba(#012052,0.9);
 
 @mixin Modal4 {
-	background-color: $modal3;
+	background-color: $modal4;
 	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052)";
 }
