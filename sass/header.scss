@@ -46,7 +46,7 @@ header#top {
 	width			: $max;
 	box-shadow		: 0 1px 5px 0 rgba(0,0,0,0.6);
 	
-	@include media($fh) {
+	@include media($six) {
 		background: none;
 		box-shadow: none;
 	}
@@ -77,11 +77,11 @@ header#top {
 		text-align		: center;
 		margin			: 0 auto -0.5em auto;
 	
-			@include media($fh) {
-				@include abT(0,0,5);
-				margin	: $max * 0.005;			
-				min-width	: 60px;
+			@include media($six) {
+				@include abT(0,0,5);		
+				min-width	: 80px;
 				background	: none;
+				text-align	: left;
 			}
 		
 		img {
@@ -90,10 +90,10 @@ header#top {
 			max-width : 672px;
 			height	  : auto;
 	
-			@include media($fh) {	
-				margin		: $max * 0.05;
-				width	 	: $max * 0.2;			
-				min-width	: 60px;
+			@include media($six) {	
+				margin		: $max * 0.03;
+				width	 	: $max * 0.3;			
+				min-width	: 80px;
 			}
 		}
 	}
@@ -106,7 +106,7 @@ header#top {
 		align-content	: flex-start;
 		width			: $max;
 		
-		@include media($fh) {
+		@include media($six) {
 			height:  550px;
 			overflow: auto;
 		}
@@ -127,7 +127,7 @@ header#top {
 				padding-top: $max*0.004;
 			}
 	
-			@include media($fh) {
+			@include media($six) {
 				left			: $max;
 				margin-left		: -4.3em;
 				padding			: $max*0.01;
@@ -183,9 +183,9 @@ header#top {
 			width			: $max / 3;
 			flex			: 1 1 250px;
 				
-			@include media($fh) {
+			@include media($six) {
 				&:nth-of-type(1) {
-					padding: 7em 1em 1em;
+					padding: 11em 1em 1em;
 				}
 				
 				padding			: 2em 1em;
@@ -256,7 +256,7 @@ header#top {
 		max-width : 260px;
 		height	  : auto;
 		
-		@include media($fh) {
+		@include media($six) {
 			@include abR(-0.2em,5.4em,2);
 		}
 	}

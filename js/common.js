@@ -32,7 +32,7 @@
 				if (flag == false) {
 					flag = true;
 					
-					if ($(window).width() > 500) {
+					if ($(window).width() > 600) {
 						pagetop.stop().animate({
 							'bottom': '50px'
 						}, 200);
@@ -164,7 +164,7 @@
 	//title
 	title = function() {
 		
-		if ($(window).width() < 500) {
+		if ($(window).width() < 600) {
 			$('h2 img').attr('src' , 'img/common/logo2.png');
 		} else {
 			$('h2 img').attr('src' , 'img/common/logo.png');

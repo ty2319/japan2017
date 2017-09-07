@@ -49,10 +49,11 @@ html body main > div.slideFrame {
 }
 /* line 45, ../sass/top.scss */
 html body main > div.slideFrame .slideCell {
+  width: 100%;
   padding-bottom: 15%;
   overflow: hidden;
 }
-/* line 49, ../sass/top.scss */
+/* line 50, ../sass/top.scss */
 html body main > div.slideFrame .slideCell img {
   width: 100%;
   height: auto;
@@ -60,16 +61,15 @@ html body main > div.slideFrame .slideCell img {
 @media all and (max-width: 600px) {
   /* line 40, ../sass/top.scss */
   html body main > div.slideFrame {
-    padding: 5%;
+    padding: 10% 0;
   }
-  /* line 58, ../sass/top.scss */
+  /* line 59, ../sass/top.scss */
   html body main > div.slideFrame .slideGuide {
     flex-flow: row nowrap;
   }
-  /* line 61, ../sass/top.scss */
+  /* line 62, ../sass/top.scss */
   html body main > div.slideFrame .slideGuide .slideCell {
     padding: 0 20px 0 0;
-    overflow: visible;
   }
   /* line 65, ../sass/top.scss */
   html body main > div.slideFrame .slideGuide .slideCell img {
@@ -85,40 +85,41 @@ html body main > div.slideFrame .slideCtrl {
   text-align: center;
   cursor: pointer;
   top: 48%;
+  z-index: 6;
 }
-/* line 82, ../sass/top.scss */
+/* line 83, ../sass/top.scss */
 html body main > div.slideFrame .slideCtrl.left, html body main > div.slideFrame .slideCtrl.right {
   top: 50%;
 }
-/* line 86, ../sass/top.scss */
+/* line 87, ../sass/top.scss */
 html body main > div.slideFrame .slideCtrl.left {
   left: 1%;
 }
-/* line 90, ../sass/top.scss */
+/* line 91, ../sass/top.scss */
 html body main > div.slideFrame .slideCtrl.right {
   right: 1%;
 }
-/* line 94, ../sass/top.scss */
+/* line 95, ../sass/top.scss */
 html body main > div.slideFrame .slideCtrl.up {
   left: 2%;
 }
-/* line 98, ../sass/top.scss */
+/* line 99, ../sass/top.scss */
 html body main > div.slideFrame .slideCtrl.down {
   right: 2%;
 }
-/* line 103, ../sass/top.scss */
+/* line 104, ../sass/top.scss */
 html body main > div ul {
   display: flex;
   flex-flow: column nowrap;
 }
-/* line 107, ../sass/top.scss */
+/* line 108, ../sass/top.scss */
 html body main > div ul#schedule {
   position: absolute;
   top: 30%;
   right: 0;
-  z-index: 1;
+  z-index: 6;
 }
-/* line 110, ../sass/top.scss */
+/* line 111, ../sass/top.scss */
 html body main > div ul#schedule li {
   background: #012052;
   display: inline-block;
@@ -135,7 +136,7 @@ html body main > div ul#schedule li {
   line-height: 1.5em !important;
   cursor: pointer;
 }
-/* line 126, ../sass/top.scss */
+/* line 127, ../sass/top.scss */
 html body main > div ul#schedule li:before {
   border-bottom: 1.5em solid #012052;
   border-left: 2.15em solid transparent;
@@ -149,21 +150,21 @@ html body main > div ul#schedule li:before {
   left: 0;
   z-index: 0;
 }
-/* line 137, ../sass/top.scss */
+/* line 138, ../sass/top.scss */
 html body main > div ul#schedule li span {
   display: inline-block;
   transform: rotate(90deg);
 }
-/* line 142, ../sass/top.scss */
+/* line 143, ../sass/top.scss */
 html body main > div ul#schedule li:hover, html body main > div ul#schedule li.current {
   background: #fff;
   color: #012052;
 }
-/* line 146, ../sass/top.scss */
+/* line 147, ../sass/top.scss */
 html body main > div ul#schedule li:hover:before, html body main > div ul#schedule li.current:before {
   border-bottom: 1.5em solid #fff;
 }
-/* line 154, ../sass/top.scss */
+/* line 155, ../sass/top.scss */
 html body main > div article {
   display: flex;
   flex-flow: row nowrap;
@@ -171,24 +172,24 @@ html body main > div article {
   width: 500%;
   background: none;
 }
-/* line 161, ../sass/top.scss */
+/* line 162, ../sass/top.scss */
 html body main > div article .contents {
   background: none !important;
   overflow-y: auto;
   width: 20%;
   padding: 8em 1.5% 0 1.5%;
 }
-/* line 167, ../sass/top.scss */
+/* line 168, ../sass/top.scss */
 html body main > div article .contents h3 img {
   width: 100%;
   height: auto;
 }
-/* line 172, ../sass/top.scss */
+/* line 173, ../sass/top.scss */
 html body main > div article .contents p {
   padding: 2em;
   color: #fff;
 }
-/* line 177, ../sass/top.scss */
+/* line 178, ../sass/top.scss */
 html body main > div article .contents ol {
   display: flex;
   flex-flow: row wrap;
@@ -196,15 +197,16 @@ html body main > div article .contents ol {
   list-style: none;
   width: 100%;
 }
-/* line 185, ../sass/top.scss */
+/* line 186, ../sass/top.scss */
 html body main > div article .contents a {
   margin: 2em auto 0 auto;
 }
-/* line 188, ../sass/top.scss */
+/* line 189, ../sass/top.scss */
 html body main > div article .contents a button {
   color: #333333;
   background-color: #fff;
   display: block;
+  margin-bottom: 1em;
   padding: 1em;
   text-align: center;
   opacity: 0.7;
@@ -215,11 +217,11 @@ html body main > div article .contents a button {
   min-width: 250px;
   transition: all 1s;
 }
-/* line 202, ../sass/top.scss */
+/* line 204, ../sass/top.scss */
 html body main > div article .contents a button:hover {
   opacity: 1;
 }
-/* line 206, ../sass/top.scss */
+/* line 208, ../sass/top.scss */
 html body main > div article .contents a button span {
   margin-right: 1em;
 }

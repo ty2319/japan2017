@@ -53,7 +53,7 @@ header#top #topnavi li {
   width: 100%;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6);
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 42, ../sass/header.scss */
   #global {
     background: none;
@@ -95,16 +95,16 @@ header#top #topnavi li {
   text-align: center;
   margin: 0 auto -0.5em auto;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 76, ../sass/header.scss */
   #global h2 {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 5;
-    margin: 0.5%;
-    min-width: 60px;
+    min-width: 80px;
     background: none;
+    text-align: left;
   }
 }
 /* line 87, ../sass/header.scss */
@@ -114,12 +114,12 @@ header#top #topnavi li {
   max-width: 672px;
   height: auto;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 87, ../sass/header.scss */
   #global h2 img {
-    margin: 5%;
-    width: 20%;
-    min-width: 60px;
+    margin: 3%;
+    width: 30%;
+    min-width: 80px;
   }
 }
 /* line 101, ../sass/header.scss */
@@ -131,7 +131,7 @@ header#top #topnavi li {
   align-content: flex-start;
   width: 100%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 101, ../sass/header.scss */
   #global > dl {
     height: 550px;
@@ -160,7 +160,7 @@ header#top #topnavi li {
     padding-top: 0.4%;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 120, ../sass/header.scss */
   #global > dl .menu-trigger {
     left: 100%;
@@ -228,7 +228,7 @@ header#top #topnavi li {
   width: 33.33333%;
   flex: 1 1 250px;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 179, ../sass/header.scss */
   #global > dl > dd {
     padding: 2em 1em;
@@ -236,7 +236,7 @@ header#top #topnavi li {
   }
   /* line 187, ../sass/header.scss */
   #global > dl > dd:nth-of-type(1) {
-    padding: 7em 1em 1em;
+    padding: 11em 1em 1em;
   }
 }
 /* line 195, ../sass/header.scss */
@@ -309,7 +309,7 @@ header#top #topnavi li {
   max-width: 260px;
   height: auto;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 251, ../sass/header.scss */
   #global #live {
     position: absolute;
