@@ -54,8 +54,12 @@ header#top {
 	&.fix {
 		@include fixT(0,0,5);
 		
-		@include media($fh) {
+		@include media($six) {
 			height: 550px;
+			
+			h2 {
+				display: none;
+			}
 		}
 	}
 	
@@ -75,13 +79,16 @@ header#top {
 
 	h2 {
 		text-align		: center;
-		margin			: 0 auto -0.5em auto;
+		margin			: -0.27em auto 0 auto;
+	
+			@include media($of) {
+				margin-top: -0.2em;
+			}
 	
 			@include media($six) {
-				@include abT(0,0,5);		
-				min-width	: 80px;
+				@include abT(0.5em,8.5em,0);
 				background	: none;
-				text-align	: left;
+				margin-left	: -$max*0.1;
 			}
 		
 		img {
@@ -91,9 +98,8 @@ header#top {
 			height	  : auto;
 	
 			@include media($six) {	
-				margin		: $max * 0.03;
-				width	 	: $max * 0.3;			
-				min-width	: 80px;
+				min-width	: 70px;
+				max-width	: 90px;
 			}
 		}
 	}
@@ -105,10 +111,11 @@ header#top {
 		align-items		: stretch;
 		align-content	: flex-start;
 		width			: $max;
+		margin-bottom	: -0.27em;
 		
 		@include media($six) {
-			height:  550px;
-			overflow: auto;
+			height		: 550px;
+			overflow	: auto;
 		}
 	
 		.menu-trigger,.menu-trigger span {
@@ -124,12 +131,10 @@ header#top {
 			padding			: $max*0.008 $max*0.01;
 	
 			@include media($of) {
-				padding-top: $max*0.004;
+				padding-top	: $max*0.004;
 			}
 	
 			@include media($six) {
-				left			: $max;
-				margin-left		: -4.3em;
 				padding			: $max*0.01;
 				background-color: $black;
 				font-size		: 0.75rem;
@@ -169,10 +174,10 @@ header#top {
 				@include media($of) {
 					@include abT(25%,4.2em,0);
 				}
-	
-					@include media($nf) {
-						display: none;
-					}
+
+				@include media($nf) {
+					display: none;
+				}
 			}
 		}
 		
@@ -185,7 +190,7 @@ header#top {
 				
 			@include media($six) {
 				&:nth-of-type(1) {
-					padding: 11em 1em 1em;
+					padding: 10em 1em 1em;
 				}
 				
 				padding			: 2em 1em;
@@ -255,9 +260,5 @@ header#top {
 		min-width : 180px;
 		max-width : 260px;
 		height	  : auto;
-		
-		@include media($six) {
-			@include abR(-0.2em,5.4em,2);
-		}
 	}
 }
