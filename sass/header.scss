@@ -57,8 +57,8 @@ header#top {
 		@include media($six) {
 			height: 550px;
 			
-			h2 {
-				display: none;
+			#live {
+				top: 0.5em;
 			}
 		}
 	}
@@ -86,9 +86,9 @@ header#top {
 			}
 	
 			@include media($six) {
-				@include abT(0.5em,8.5em,0);
-				background	: none;
-				margin-left	: -$max*0.1;
+				@include abT(0.8em,18%,6);
+				background: none;
+				text-align: left;
 			}
 		
 		img {
@@ -98,8 +98,7 @@ header#top {
 			height	  : auto;
 	
 			@include media($six) {	
-				min-width	: 70px;
-				max-width	: 90px;
+				min-width	: 90px;
 			}
 		}
 	}
@@ -138,6 +137,7 @@ header#top {
 				padding			: $max*0.01;
 				background-color: $black;
 				font-size		: 0.75rem;
+				width			: $max;
 			}
 			
 			span {
@@ -190,7 +190,7 @@ header#top {
 				
 			@include media($six) {
 				&:nth-of-type(1) {
-					padding: 10em 1em 1em;
+					padding: 6em 1em 1em;
 				}
 				
 				padding			: 2em 1em;
@@ -254,11 +254,11 @@ header#top {
 	}
 	
 	#live {
-		@include abR(-0.2em,0,2);
-		display: block;
-		width	  : $max * 0.15;
-		min-width : 180px;
-		max-width : 260px;
-		height	  : auto;
+		@include abR(-1em,0.5em,6);
+		display		: block;
+		width		: $max * 0.1;
+		min-width	: 70px;
+		max-width	: 195px;
+		height		: auto;
 	}
 }

@@ -45,6 +45,7 @@ html {
 					.slideCell {
 						width			: $max;
 						padding-bottom	: $max * 0.15;
+						overflow		: hidden;
 						
 						img {
 							width : $max;
@@ -53,15 +54,14 @@ html {
 					}
 					
 					@include media($six) {
-						padding	: $max*0.1 0;
+						padding	: $max*0.15 0;
 						
 						.slideGuide {
-							flex-flow: row nowrap;
+							flex-flow: row wrap;
 							
 							.slideCell {
 								width	: 200px;
-								padding	: 0 20px 0 0;
-								overflow: visible;
+								padding	: 0 25px 0 0;
 						
 								img {
 									width : 180px;

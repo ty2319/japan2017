@@ -51,8 +51,9 @@ html body main > div.slideFrame {
 html body main > div.slideFrame .slideCell {
   width: 100%;
   padding-bottom: 15%;
+  overflow: hidden;
 }
-/* line 49, ../sass/top.scss */
+/* line 50, ../sass/top.scss */
 html body main > div.slideFrame .slideCell img {
   width: 100%;
   height: auto;
@@ -60,17 +61,16 @@ html body main > div.slideFrame .slideCell img {
 @media all and (max-width: 600px) {
   /* line 40, ../sass/top.scss */
   html body main > div.slideFrame {
-    padding: 10% 0;
+    padding: 15% 0;
   }
-  /* line 58, ../sass/top.scss */
+  /* line 59, ../sass/top.scss */
   html body main > div.slideFrame .slideGuide {
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
   }
-  /* line 61, ../sass/top.scss */
+  /* line 62, ../sass/top.scss */
   html body main > div.slideFrame .slideGuide .slideCell {
     width: 200px;
-    padding: 0 20px 0 0;
-    overflow: visible;
+    padding: 0 25px 0 0;
   }
   /* line 66, ../sass/top.scss */
   html body main > div.slideFrame .slideGuide .slideCell img {

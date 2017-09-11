@@ -73,8 +73,8 @@ header#top #topnavi li {
     height: 550px;
   }
   /* line 60, ../sass/header.scss */
-  #global.fix h2 {
-    display: none;
+  #global.fix #live {
+    top: 0.5em;
   }
 }
 /* line 66, ../sass/header.scss */
@@ -109,11 +109,11 @@ header#top #topnavi li {
   /* line 80, ../sass/header.scss */
   #global h2 {
     position: absolute;
-    top: 0.5em;
-    left: 8.5em;
-    z-index: 0;
+    top: 0.8em;
+    left: 18%;
+    z-index: 6;
     background: none;
-    margin-left: -10%;
+    text-align: left;
   }
 }
 /* line 94, ../sass/header.scss */
@@ -126,11 +126,10 @@ header#top #topnavi li {
 @media all and (max-width: 600px) {
   /* line 94, ../sass/header.scss */
   #global h2 img {
-    min-width: 70px;
-    max-width: 90px;
+    min-width: 90px;
   }
 }
-/* line 107, ../sass/header.scss */
+/* line 106, ../sass/header.scss */
 #global > dl {
   display: flex;
   flex-flow: row wrap;
@@ -141,19 +140,19 @@ header#top #topnavi li {
   margin-bottom: -0.27em;
 }
 @media all and (max-width: 600px) {
-  /* line 107, ../sass/header.scss */
+  /* line 106, ../sass/header.scss */
   #global > dl {
     height: 550px;
     overflow: auto;
   }
 }
-/* line 121, ../sass/header.scss */
+/* line 120, ../sass/header.scss */
 #global > dl .menu-trigger, #global > dl .menu-trigger span {
   display: block;
   transition: all .4s;
   box-sizing: border-box;
 }
-/* line 127, ../sass/header.scss */
+/* line 126, ../sass/header.scss */
 #global > dl .menu-trigger {
   position: absolute;
   top: 0;
@@ -164,17 +163,18 @@ header#top #topnavi li {
   padding: 0.8% 1%;
 }
 @media all and (max-width: 1500px) {
-  /* line 127, ../sass/header.scss */
+  /* line 126, ../sass/header.scss */
   #global > dl .menu-trigger {
     padding-top: 0.4%;
   }
 }
 @media all and (max-width: 600px) {
-  /* line 127, ../sass/header.scss */
+  /* line 126, ../sass/header.scss */
   #global > dl .menu-trigger {
     padding: 1%;
     background-color: #000;
     font-size: 0.75rem;
+    width: 100%;
   }
 }
 /* line 143, ../sass/header.scss */
@@ -243,7 +243,7 @@ header#top #topnavi li {
   }
   /* line 192, ../sass/header.scss */
   #global > dl > dd:nth-of-type(1) {
-    padding: 10em 1em 1em;
+    padding: 6em 1em 1em;
   }
 }
 /* line 200, ../sass/header.scss */
@@ -307,12 +307,12 @@ header#top #topnavi li {
 /* line 256, ../sass/header.scss */
 #global #live {
   position: absolute;
-  top: -0.2em;
-  right: 0;
-  z-index: 2;
+  top: -1em;
+  right: 0.5em;
+  z-index: 6;
   display: block;
-  width: 15%;
-  min-width: 180px;
-  max-width: 260px;
+  width: 10%;
+  min-width: 70px;
+  max-width: 195px;
   height: auto;
 }
