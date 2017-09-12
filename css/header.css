@@ -65,7 +65,7 @@ header#top #topnavi li {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 6;
 }
 @media all and (max-width: 600px) {
   /* line 54, ../sass/header.scss */
@@ -172,9 +172,11 @@ header#top #topnavi li {
   /* line 126, ../sass/header.scss */
   #global > dl .menu-trigger {
     padding: 1%;
-    background-color: #000;
     font-size: 0.75rem;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
   }
 }
 /* line 143, ../sass/header.scss */
@@ -239,7 +241,9 @@ header#top #topnavi li {
   /* line 184, ../sass/header.scss */
   #global > dl > dd {
     padding: 2em 1em;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
   }
   /* line 192, ../sass/header.scss */
   #global > dl > dd:nth-of-type(1) {
@@ -309,7 +313,7 @@ header#top #topnavi li {
   position: absolute;
   top: -1em;
   right: 0.5em;
-  z-index: 6;
+  z-index: 7;
   display: block;
   width: 10%;
   min-width: 70px;

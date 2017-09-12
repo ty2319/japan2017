@@ -54,7 +54,7 @@ html {
 					}
 					
 					@include media($six) {
-						padding	: $max*0.15 0;
+						padding	: 20px 0;
 						
 						.slideGuide {
 							flex-flow: row wrap;

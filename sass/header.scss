@@ -52,7 +52,7 @@ header#top {
 	}
 	
 	&.fix {
-		@include fixT(0,0,5);
+		@include fixT(0,0,6);
 		
 		@include media($six) {
 			height: 550px;
@@ -135,9 +135,9 @@ header#top {
 	
 			@include media($six) {
 				padding			: $max*0.01;
-				background-color: $black;
 				font-size		: 0.75rem;
 				width			: $max;
+				@include Modal;
 			}
 			
 			span {
@@ -194,7 +194,7 @@ header#top {
 				}
 				
 				padding			: 2em 1em;
-				background-color: $black;
+				@include Modal;
 			}
 			
 			&:nth-of-type(2) {
@@ -254,7 +254,7 @@ header#top {
 	}
 	
 	#live {
-		@include abR(-1em,0.5em,6);
+		@include abR(-1em,0.5em,7);
 		display		: block;
 		width		: $max * 0.1;
 		min-width	: 70px;

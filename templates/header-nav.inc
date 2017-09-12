@@ -45,5 +45,5 @@
 			</dl>
 		</dd>
 	</dl>
-	<img src="img/common/live2.png" id="live">
+	<img src="img/common/live.png" id="live">
 </nav>

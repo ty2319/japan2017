@@ -61,7 +61,7 @@ html body main > div.slideFrame .slideCell img {
 @media all and (max-width: 600px) {
   /* line 40, ../sass/top.scss */
   html body main > div.slideFrame {
-    padding: 15% 0;
+    padding: 20px 0;
   }
   /* line 59, ../sass/top.scss */
   html body main > div.slideFrame .slideGuide {
