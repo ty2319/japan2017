@@ -237,28 +237,36 @@ article .contents {
   flex-flow: row wrap;
 }
 /* line 231, ../sass/main.scss */
-article .contents.bg0 {
-  background-image: url(../img/common/10.png);
-}
-/* line 231, ../sass/main.scss */
 article .contents.bg1 {
-  background-image: url(../img/common/11.png);
+  background-image: url(../img/common/01.png);
 }
 /* line 231, ../sass/main.scss */
 article .contents.bg2 {
-  background-image: url(../img/common/12.png);
+  background-image: url(../img/common/02.png);
 }
 /* line 231, ../sass/main.scss */
 article .contents.bg3 {
-  background-image: url(../img/common/13.png);
+  background-image: url(../img/common/03.png);
 }
 /* line 231, ../sass/main.scss */
 article .contents.bg4 {
-  background-image: url(../img/common/14.png);
+  background-image: url(../img/common/04.png);
 }
 /* line 231, ../sass/main.scss */
 article .contents.bg5 {
-  background-image: url(../img/common/15.png);
+  background-image: url(../img/common/05.png);
+}
+/* line 231, ../sass/main.scss */
+article .contents.bg6 {
+  background-image: url(../img/common/06.png);
+}
+/* line 231, ../sass/main.scss */
+article .contents.bg7 {
+  background-image: url(../img/common/07.png);
+}
+/* line 231, ../sass/main.scss */
+article .contents.bg8 {
+  background-image: url(../img/common/08.png);
 }
 /* line 236, ../sass/main.scss */
 article .contents hr {

@@ -226,10 +226,10 @@ article {
 		display			: flex;
 		flex-flow		: row wrap;
 		
-		@for $value from 0 through 5 {
+		@for $value from 1 through 8 {
 			
 			&.bg#{$value} {
-				background-image: url(#{$ip}common/#{$value + 10}.png);
+				background-image: url(#{$ip}common/0#{$value}.png);
 			}
 		}
 		

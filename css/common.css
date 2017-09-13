@@ -40,73 +40,69 @@ html body .menu_open {
   }
 }
 /* line 39, ../sass/common.scss */
-html body.bg0 {
+html body.bg1 {
   background-image: url(../img/common/01.jpg);
 }
 /* line 39, ../sass/common.scss */
-html body.bg1 {
+html body.bg2 {
   background-image: url(../img/common/02.jpg);
 }
 /* line 39, ../sass/common.scss */
-html body.bg2 {
+html body.bg3 {
   background-image: url(../img/common/03.jpg);
 }
 /* line 39, ../sass/common.scss */
-html body.bg3 {
+html body.bg4 {
   background-image: url(../img/common/04.jpg);
 }
 /* line 39, ../sass/common.scss */
-html body.bg4 {
+html body.bg5 {
   background-image: url(../img/common/05.jpg);
 }
 /* line 39, ../sass/common.scss */
-html body.bg5 {
+html body.bg6 {
   background-image: url(../img/common/06.jpg);
 }
 /* line 39, ../sass/common.scss */
-html body.bg6 {
+html body.bg7 {
   background-image: url(../img/common/07.jpg);
 }
 /* line 39, ../sass/common.scss */
-html body.bg7 {
+html body.bg8 {
   background-image: url(../img/common/08.jpg);
 }
 /* line 39, ../sass/common.scss */
-html body.bg8 {
+html body.bg9 {
   background-image: url(../img/common/09.jpg);
 }
 /* line 44, ../sass/common.scss */
-html body.bg9 {
-  background-image: url(../img/common/10.jpg);
-}
-/* line 48, ../sass/common.scss */
 html body[class*=bg] {
   background-position: center 50px;
   transition: background-position 40s ease 1s;
 }
 @media all and (max-width: 600px) {
-  /* line 48, ../sass/common.scss */
+  /* line 44, ../sass/common.scss */
   html body[class*=bg] {
     background-size: 1000px auto;
     background-position: right 0;
   }
 }
-/* line 58, ../sass/common.scss */
+/* line 54, ../sass/common.scss */
 html body a {
   color: #0033cc;
   text-decoration: none;
 }
-/* line 62, ../sass/common.scss */
+/* line 58, ../sass/common.scss */
 html body a:hover {
   text-decoration: none;
 }
-/* line 67, ../sass/common.scss */
+/* line 63, ../sass/common.scss */
 html body img {
   border: none;
   line-height: 0;
   vertical-align: bottom;
 }
-/* line 73, ../sass/common.scss */
+/* line 69, ../sass/common.scss */
 html body #pagetop {
   position: fixed;
   bottom: -50px;
@@ -114,7 +110,7 @@ html body #pagetop {
   z-index: 1;
 }
 @media all and (max-width: 500px) {
-  /* line 73, ../sass/common.scss */
+  /* line 69, ../sass/common.scss */
   html body #pagetop {
     position: fixed;
     bottom: -50px;
@@ -122,7 +118,7 @@ html body #pagetop {
     z-index: 5;
   }
 }
-/* line 80, ../sass/common.scss */
+/* line 76, ../sass/common.scss */
 html body #pagetop a {
   display: block;
   width: 50px;
