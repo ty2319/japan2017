@@ -26,6 +26,7 @@
 		var num = $('section').length-1;
 		
 		$('article').css('margin-left' , $('section').outerWidth() * -num);
+		$('h3').css('margin-left' , $('section').outerWidth() * num);
 		
 		$('#schedule li').on('click' , function() {
 			var cur = $('#schedule li').index(this);
@@ -34,6 +35,7 @@
 				
 				$('#schedule li').removeClass('current');
 				$('article').animate({marginLeft: $('section').outerWidth() * -cur} , 'slow');
+				$('h3').css('margin-left' , $('section').outerWidth() * cur);
 				$(this).addClass('current');
 			}
 		});

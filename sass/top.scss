@@ -54,13 +54,14 @@ html {
 					}
 					
 					@include media($six) {
-						padding	: $max*0.1 0;
+						padding	: 20px 0;
 						
 						.slideGuide {
-							flex-flow: row nowrap;
+							flex-flow: row wrap;
 							
 							.slideCell {
-								padding	: 0 20px 0 0;
+								width	: 200px;
+								padding	: 0 25px 0 0;
 						
 								img {
 									width : 180px;
@@ -154,18 +155,39 @@ html {
 			
 				article {
 					display		: flex;
-					flex-flow	: row nowrap;
+					flex-flow	: row wrap;
 					overflow	: hidden;
 					width		: $max * 5;
 					background	: none;
+						
+					h3 {
+						font-size	: 2.5em;
+						font-weight : normal;
+						color		: $white;
+						text-shadow : -1px -1px 3px $black, 1px 1px 3px $black;
+						transform	: skewX(-10deg);
+						width		: $max;
+						padding		: 4em $max*0.015 2em $max*0.015;		
+						
+						@include media($six) {
+							font-size	: 2em;
+							line-height : 2em;
+							padding		: 2em $max*0.015;
+						}
+						
+						span {
+							font-size	 : 0.5em;
+						}
+					}
 					
 					.contents {
 						background	: none !important;
 						overflow-y	: auto;
 						width		: $max / 5;
-						padding		: 8em $max*0.015 0 $max*0.015;
+						margin-bottom: 3em;
+						padding		: 0 $max*0.015;
 						
-						h3 img {
+						img {
 							width : $max;
 							height: auto;
 						}

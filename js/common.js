@@ -165,7 +165,7 @@
 	title = function() {
 		
 		if ($(window).width() < 600) {
-			$('h2 img').attr('src' , 'img/common/logo2.png');
+			$('h2 img').attr('src' , 'img/common/logo2.gif');
 		} else {
 			$('h2 img').attr('src' , 'img/common/logo.png');
 		}
