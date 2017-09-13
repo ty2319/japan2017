@@ -88,7 +88,6 @@
 		if ($(window).width() > 600) {
 			$('main > div , .slideFrame').outerHeight($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
 			$('.slideFrame > ul').attr('class' , 'slideGuide up').width($(window).width() * 0.4);
-			$('.slideCell').height($('img' , this).height());
 			$('.slideCtrl:first').attr('class' , 'slideCtrl up').html('↑<br />prev')
 			$('.slideCtrl:last').attr('class' , 'slideCtrl down').html('next<br />↓');
 		} else {

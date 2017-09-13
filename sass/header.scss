@@ -162,7 +162,7 @@ header#top {
 				
 				span:nth-of-type(3) {
 					-webkit-transform: translateY(-0.85em) rotate(315deg);
-					transform: translateY(-0.85em) rotate(315deg);
+					transform		 : translateY(-0.85em) rotate(315deg);
 				}
 			}
 			
@@ -187,49 +187,51 @@ header#top {
 			vertical-align	: top;
 			width			: $max / 3;
 			flex			: 1 1 250px;
+			margin-bottom	: 0.27em;
 				
 			@include media($six) {
-				&:nth-of-type(1) {
-					padding: 6em 1em 1em;
-				}
-				
-				padding			: 2em 1em;
+				margin-bottom: 0;
+				padding		 : 2em 1em;
 				@include Modal;
+				
+				&:nth-of-type(1) {
+					padding		 : 6em 1em 1em;
+				}
 			}
 			
 			&:nth-of-type(2) {
-				border-left: $white 1px dotted;
+				border-left	: $white 1px dotted;
 				border-right: $white 1px dotted;
 				
-				@include media($fh) {
+				@include media($six) {
 					border: none;
 				}
 			}
 			
 			dl {
-				margin: 0 auto;
+				margin : 0 auto;
 				display: none;
 				
 				dt {
-					font-weight: bold;
-					margin-bottom: 1.5rem;
-					padding: 0.5rem;
-					border-top: $white 1px solid;
-					border-bottom: $white 1px solid;
+					font-weight		: bold;
+					margin-bottom	: 1.5rem;
+					padding			: 0.5rem;
+					border-top		: $white 1px solid;
+					border-bottom	: $white 1px solid;
 				}
 				
 				dd {
-					background: none;
-					margin: 0.5em 0 0 1.5em;
-					color: lighten($black , 45%);
-					position: $r;
+					background	: none;
+					margin		: 0.5em 0 0 1.5em;
+					color		: lighten($black , 45%);
+					position	: $r;
 					
 					a {
 						color: $white;
 						
 						&.active {
-							color: $blue;
-							text-decoration: line-through; 
+							color			: $blue;
+							text-decoration	: line-through; 
 						}
 					}
 						
@@ -240,11 +242,11 @@ header#top {
 			}
 					
 			i {
-				font-style: normal;
-				font-family: century;
-				font-weight: normal;
-				font-size: 0.6rem;
-				margin-left: 1rem;
+				font-style	: normal;
+				font-family	: century;
+				font-weight	: normal;
+				font-size	: 0.6rem;
+				margin-left	: 1rem;
 
 				@include media($ot) {
 					display: none;

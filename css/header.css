@@ -236,37 +236,39 @@ header#top #topnavi li {
   vertical-align: top;
   width: 33.33333%;
   flex: 1 1 250px;
+  margin-bottom: 0.27em;
 }
 @media all and (max-width: 600px) {
   /* line 184, ../sass/header.scss */
   #global > dl > dd {
+    margin-bottom: 0;
     padding: 2em 1em;
     background-color: rgba(0, 0, 0, 0.8);
     filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
     -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
   }
-  /* line 192, ../sass/header.scss */
+  /* line 197, ../sass/header.scss */
   #global > dl > dd:nth-of-type(1) {
     padding: 6em 1em 1em;
   }
 }
-/* line 200, ../sass/header.scss */
+/* line 202, ../sass/header.scss */
 #global > dl > dd:nth-of-type(2) {
   border-left: #fff 1px dotted;
   border-right: #fff 1px dotted;
 }
-@media all and (max-width: 500px) {
-  /* line 200, ../sass/header.scss */
+@media all and (max-width: 600px) {
+  /* line 202, ../sass/header.scss */
   #global > dl > dd:nth-of-type(2) {
     border: none;
   }
 }
-/* line 209, ../sass/header.scss */
+/* line 211, ../sass/header.scss */
 #global > dl > dd dl {
   margin: 0 auto;
   display: none;
 }
-/* line 213, ../sass/header.scss */
+/* line 215, ../sass/header.scss */
 #global > dl > dd dl dt {
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -274,27 +276,27 @@ header#top #topnavi li {
   border-top: #fff 1px solid;
   border-bottom: #fff 1px solid;
 }
-/* line 221, ../sass/header.scss */
+/* line 223, ../sass/header.scss */
 #global > dl > dd dl dd {
   background: none;
   margin: 0.5em 0 0 1.5em;
   color: #737373;
   position: relative;
 }
-/* line 227, ../sass/header.scss */
+/* line 229, ../sass/header.scss */
 #global > dl > dd dl dd a {
   color: #fff;
 }
-/* line 230, ../sass/header.scss */
+/* line 232, ../sass/header.scss */
 #global > dl > dd dl dd a.active {
   color: #2c7eff;
   text-decoration: line-through;
 }
-/* line 236, ../sass/header.scss */
+/* line 238, ../sass/header.scss */
 #global > dl > dd dl dd span {
   margin-right: 0.5rem;
 }
-/* line 242, ../sass/header.scss */
+/* line 244, ../sass/header.scss */
 #global > dl > dd i {
   font-style: normal;
   font-family: century;
@@ -303,12 +305,12 @@ header#top #topnavi li {
   margin-left: 1rem;
 }
 @media all and (max-width: 1200px) {
-  /* line 242, ../sass/header.scss */
+  /* line 244, ../sass/header.scss */
   #global > dl > dd i {
     display: none;
   }
 }
-/* line 256, ../sass/header.scss */
+/* line 258, ../sass/header.scss */
 #global #live {
   position: absolute;
   top: -1em;
