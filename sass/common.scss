@@ -23,7 +23,9 @@ html {
 		}
 		
 		@include media($six) {
-			font-size: 0.6rem !important;
+			font-size			: 0.6rem !important;
+			background-position : center -100px;
+			background-size		: 800px auto;
 		}
 	
 		@include media($nf) {
@@ -34,15 +36,16 @@ html {
 			font-size: 0.875rem;
 		}
 		
-		@for $value from 0 through 8 {
-			
+		@for $value from 1 through 12 {
+				
 			&.bg#{$value} {
-				background-image: url(#{$ip}common/0#{$value + 1}.jpg);
-			}
-		}
-		
-		&.bg9 {
-			background-image: url(#{$ip}common/10.jpg);
+			
+				@if $value < 10 {
+					background-image: url(#{$ip}common/0#{$value}.jpg);
+				} @else {
+					background-image: url(#{$ip}common/#{$value}.jpg);
+				}
+			} 
 		}
 		
 		&[class*=bg] {
@@ -51,7 +54,7 @@ html {
 			
 			@include media($six) {
 				background-size		: 1000px auto;
-				background-position : right 0;
+				background-position : center top;
 			}
 		}
 
@@ -73,8 +76,8 @@ html {
 		#pagetop {
 			@include fixB(-50px,55px,1);
 			
-			@include media($fh) {
-				@include fixB(-50px,10px,5);
+			@include media($six) {
+				@include fixB(-50px,10px,6);
 			}
 			
 			a {

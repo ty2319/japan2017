@@ -10,6 +10,7 @@
 		text-align	: center;
 		order		: 2;
 		position	: $r;
+		padding-top	: 7em !important;
 		
 		@include media($nf) {
 			order: 1;

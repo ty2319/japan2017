@@ -5,6 +5,7 @@
   text-align: center;
   order: 2;
   position: relative;
+  padding-top: 7em !important;
 }
 @media all and (max-width: 940px) {
   /* line 8, ../sass/results.scss */
@@ -19,36 +20,36 @@
     border-bottom: 1px dotted #4d4d4d;
   }
 }
-/* line 23, ../sass/results.scss */
+/* line 24, ../sass/results.scss */
 .contents .half h5 {
   margin: 0;
 }
-/* line 27, ../sass/results.scss */
+/* line 28, ../sass/results.scss */
 .contents .half div {
   display: flex;
   flex-flow: row nowrap;
 }
-/* line 31, ../sass/results.scss */
+/* line 32, ../sass/results.scss */
 .contents .half div section {
   padding: 0;
 }
 @media all and (max-width: 940px) {
-  /* line 31, ../sass/results.scss */
+  /* line 32, ../sass/results.scss */
   .contents .half div section {
     margin-left: 1.5em;
   }
 }
 @media all and (max-width: 500px) {
-  /* line 31, ../sass/results.scss */
+  /* line 32, ../sass/results.scss */
   .contents .half div section {
     margin-left: 1em;
   }
 }
-/* line 42, ../sass/results.scss */
+/* line 43, ../sass/results.scss */
 .contents .half div section p {
   margin: 0;
 }
-/* line 50, ../sass/results.scss */
+/* line 51, ../sass/results.scss */
 .contents .half ul .prev {
   position: absolute;
   top: 50em;
@@ -57,12 +58,12 @@
   display: none;
 }
 @media all and (max-width: 940px) {
-  /* line 50, ../sass/results.scss */
+  /* line 51, ../sass/results.scss */
   .contents .half ul .prev {
     margin-left: -1em;
   }
 }
-/* line 59, ../sass/results.scss */
+/* line 60, ../sass/results.scss */
 .contents .half ul .next {
   position: absolute;
   top: 50em;
@@ -70,20 +71,20 @@
   z-index: 6;
 }
 @media all and (max-width: 940px) {
-  /* line 59, ../sass/results.scss */
+  /* line 60, ../sass/results.scss */
   .contents .half ul .next {
     margin-right: -1em;
   }
 }
-/* line 67, ../sass/results.scss */
+/* line 68, ../sass/results.scss */
 .contents .half ul a {
   color: #012052;
 }
-/* line 70, ../sass/results.scss */
+/* line 71, ../sass/results.scss */
 .contents .half ul a:hover {
   color: #035be9;
 }
-/* line 77, ../sass/results.scss */
+/* line 78, ../sass/results.scss */
 .contents table {
   border-collapse: collapse;
   border: #b3b3b3 solid 1px;
@@ -91,55 +92,55 @@
   padding: 0;
 }
 @media all and (max-width: 940px) {
-  /* line 83, ../sass/results.scss */
+  /* line 84, ../sass/results.scss */
   .contents table.quarter {
     width: 48% !important;
   }
 }
 @media all and (max-width: 500px) {
-  /* line 83, ../sass/results.scss */
+  /* line 84, ../sass/results.scss */
   .contents table.quarter {
     width: 100% !important;
   }
 }
-/* line 93, ../sass/results.scss */
+/* line 94, ../sass/results.scss */
 .contents table.quarter:nth-of-type(1) {
   order: 1;
 }
 @media all and (max-width: 940px) {
-  /* line 93, ../sass/results.scss */
+  /* line 94, ../sass/results.scss */
   .contents table.quarter:nth-of-type(1) {
     order: 2;
     margin-right: 4%;
   }
 }
 @media all and (max-width: 600px) {
-  /* line 93, ../sass/results.scss */
+  /* line 94, ../sass/results.scss */
   .contents table.quarter:nth-of-type(1) {
     margin-bottom: 5em;
   }
 }
-/* line 106, ../sass/results.scss */
+/* line 107, ../sass/results.scss */
 .contents table.quarter:nth-of-type(2) {
   order: 3;
 }
-/* line 111, ../sass/results.scss */
+/* line 112, ../sass/results.scss */
 .contents table caption span {
   font-size: 1.25em;
 }
-/* line 115, ../sass/results.scss */
+/* line 116, ../sass/results.scss */
 .contents table thead th {
   background-color: rgba(77, 77, 77, 0.8);
   color: #fff;
 }
-/* line 120, ../sass/results.scss */
+/* line 121, ../sass/results.scss */
 .contents table th, .contents table td {
   border-right: #b3b3b3 dotted 1px;
   padding: 0.7em 0.5em;
   text-align: center;
   width: auto;
 }
-/* line 127, ../sass/results.scss */
+/* line 128, ../sass/results.scss */
 .contents table.battery {
   border: none;
   width: auto;
@@ -147,58 +148,58 @@
   border-spacing: 0 0.5em;
   margin-bottom: 5em !important;
 }
-/* line 134, ../sass/results.scss */
+/* line 135, ../sass/results.scss */
 .contents table.battery th, .contents table.battery td {
   border: none;
   text-align: left;
   padding: 0.4em;
   line-height: 100%;
 }
-/* line 141, ../sass/results.scss */
+/* line 142, ../sass/results.scss */
 .contents table.battery .b_n {
   background-color: rgba(44, 126, 255, 0.8);
   color: #fff;
 }
-/* line 146, ../sass/results.scss */
+/* line 147, ../sass/results.scss */
 .contents table.battery .b_e {
   background-color: rgba(77, 77, 77, 0.8);
   color: #fff;
 }
-/* line 152, ../sass/results.scss */
+/* line 153, ../sass/results.scss */
 .contents table.score thead th {
   background-color: rgba(1, 32, 82, 0.9);
 }
-/* line 156, ../sass/results.scss */
+/* line 157, ../sass/results.scss */
 .contents table .current {
   background-color: rgba(26, 26, 26, 0.8) !important;
   font-weight: bold;
 }
-/* line 160, ../sass/results.scss */
+/* line 161, ../sass/results.scss */
 .contents table .current a {
   color: #fff;
 }
-/* line 167, ../sass/results.scss */
+/* line 168, ../sass/results.scss */
 .contents table.blue caption {
   color: #2c7eff !important;
 }
-/* line 171, ../sass/results.scss */
+/* line 172, ../sass/results.scss */
 .contents table.blue thead th {
   background-color: rgba(44, 126, 255, 0.8);
 }
-/* line 177, ../sass/results.scss */
+/* line 178, ../sass/results.scss */
 .contents table.border caption {
   color: #666666 !important;
 }
-/* line 182, ../sass/results.scss */
+/* line 183, ../sass/results.scss */
 .contents table .back_blue th, .contents table .back_blue td {
   background-color: rgba(223, 235, 255, 0.8);
 }
-/* line 187, ../sass/results.scss */
+/* line 188, ../sass/results.scss */
 .contents .ntt thead th {
   background-color: rgba(44, 126, 255, 0.8);
   color: #FFF;
 }
-/* line 192, ../sass/results.scss */
+/* line 193, ../sass/results.scss */
 .contents .enemy thead th {
   background-color: rgba(77, 77, 77, 0.8);
   color: #FFF;

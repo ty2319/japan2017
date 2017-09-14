@@ -56,10 +56,10 @@ header#top {
 		
 		@include media($six) {
 			height: 550px;
-			
-			#live {
-				top: 0.5em;
-			}
+		}
+		
+		#live {
+			top: 0.5em;
 		}
 	}
 	
@@ -191,12 +191,8 @@ header#top {
 				
 			@include media($six) {
 				margin-bottom: 0;
-				padding		 : 2em 1em;
+				padding		 : 6em 1em 1em;
 				@include Modal;
-				
-				&:nth-of-type(1) {
-					padding		 : 6em 1em 1em;
-				}
 			}
 			
 			&:nth-of-type(2) {

@@ -25,6 +25,8 @@ html body .menu_open {
   /* line 11, ../sass/common.scss */
   html body {
     font-size: 0.6rem !important;
+    background-position: center -100px;
+    background-size: 800px auto;
   }
 }
 @media all and (max-width: 940px) {
@@ -39,86 +41,98 @@ html body .menu_open {
     font-size: 0.875rem;
   }
 }
-/* line 39, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
 html body.bg1 {
   background-image: url(../img/common/01.jpg);
 }
-/* line 39, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
 html body.bg2 {
   background-image: url(../img/common/02.jpg);
 }
-/* line 39, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
 html body.bg3 {
   background-image: url(../img/common/03.jpg);
 }
-/* line 39, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
 html body.bg4 {
   background-image: url(../img/common/04.jpg);
 }
-/* line 39, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
 html body.bg5 {
   background-image: url(../img/common/05.jpg);
 }
-/* line 39, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
 html body.bg6 {
   background-image: url(../img/common/06.jpg);
 }
-/* line 39, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
 html body.bg7 {
   background-image: url(../img/common/07.jpg);
 }
-/* line 39, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
 html body.bg8 {
   background-image: url(../img/common/08.jpg);
 }
-/* line 39, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
 html body.bg9 {
   background-image: url(../img/common/09.jpg);
 }
-/* line 44, ../sass/common.scss */
+/* line 41, ../sass/common.scss */
+html body.bg10 {
+  background-image: url(../img/common/10.jpg);
+}
+/* line 41, ../sass/common.scss */
+html body.bg11 {
+  background-image: url(../img/common/11.jpg);
+}
+/* line 41, ../sass/common.scss */
+html body.bg12 {
+  background-image: url(../img/common/12.jpg);
+}
+/* line 51, ../sass/common.scss */
 html body[class*=bg] {
   background-position: center 50px;
   transition: background-position 40s ease 1s;
 }
 @media all and (max-width: 600px) {
-  /* line 44, ../sass/common.scss */
+  /* line 51, ../sass/common.scss */
   html body[class*=bg] {
     background-size: 1000px auto;
-    background-position: right 0;
+    background-position: center top;
   }
 }
-/* line 54, ../sass/common.scss */
+/* line 61, ../sass/common.scss */
 html body a {
   color: #0033cc;
   text-decoration: none;
 }
-/* line 58, ../sass/common.scss */
+/* line 65, ../sass/common.scss */
 html body a:hover {
   text-decoration: none;
 }
-/* line 63, ../sass/common.scss */
+/* line 70, ../sass/common.scss */
 html body img {
   border: none;
   line-height: 0;
   vertical-align: bottom;
 }
-/* line 69, ../sass/common.scss */
+/* line 76, ../sass/common.scss */
 html body #pagetop {
   position: fixed;
   bottom: -50px;
   right: 55px;
   z-index: 1;
 }
-@media all and (max-width: 500px) {
-  /* line 69, ../sass/common.scss */
+@media all and (max-width: 600px) {
+  /* line 76, ../sass/common.scss */
   html body #pagetop {
     position: fixed;
     bottom: -50px;
     right: 10px;
-    z-index: 5;
+    z-index: 6;
   }
 }
-/* line 76, ../sass/common.scss */
+/* line 83, ../sass/common.scss */
 html body #pagetop a {
   display: block;
   width: 50px;

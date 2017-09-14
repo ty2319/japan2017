@@ -12,10 +12,9 @@
 		$('header#title').append('<p id="scroll">scroll<span class="fa fa-angle-down fa-2x"></span></p>');		
 		$('.contents:odd').css('background-color','#e9f2ff');
 		$('.contents:even').css('background-color','#FFFFFF');
-		$('.contents:eq(0)').css('border-top' , '#012052 7px solid');
 		
 		$('.contents').each(function() {
-			var A = Math.floor(6*Math.random());
+			var A = Math.floor(7*Math.random()) + 1;
             $(this).addClass('bg'+A);
         });
 	},
@@ -171,7 +170,7 @@
 		}
 			
 		var ct	= $('.contents:first').offset().top + 7;
-		var A	= Math.floor(9*Math.random());
+		var A	= Math.floor(11*Math.random()) + 1;
 		
 		$('body').addClass('bg'+A);
 		

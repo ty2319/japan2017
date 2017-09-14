@@ -52,20 +52,19 @@ article .contents > section ul {
   padding: 0 0 0 2em;
   display: flex;
   flex-flow: row wrap;
-  flex-wrap: wrap;
 }
-/* line 54, ../sass/past.scss */
+/* line 53, ../sass/past.scss */
 article .contents > section ul li {
   visibility: hidden;
 }
-/* line 57, ../sass/past.scss */
+/* line 56, ../sass/past.scss */
 article .contents > section ul li.show {
   visibility: visible !important;
   animation: bounce 0.6s;
   margin-bottom: 3em;
   position: relative;
 }
-/* line 63, ../sass/past.scss */
+/* line 62, ../sass/past.scss */
 article .contents > section ul li.show:before {
   position: absolute;
   top: 0;
@@ -77,79 +76,79 @@ article .contents > section ul li.show:before {
   border-top: 1em solid #fff;
   border-left: 1em solid transparent;
 }
-/* line 73, ../sass/past.scss */
+/* line 72, ../sass/past.scss */
 article .contents > section ul li h5 {
   margin: 0;
   padding: 1em 1em 0 1em;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
 }
-/* line 78, ../sass/past.scss */
+/* line 77, ../sass/past.scss */
 article .contents > section ul li h5:before {
   content: '【';
 }
-/* line 82, ../sass/past.scss */
+/* line 81, ../sass/past.scss */
 article .contents > section ul li h5:after {
   content: '】';
 }
-/* line 87, ../sass/past.scss */
+/* line 86, ../sass/past.scss */
 article .contents > section ul li p {
   padding: 1em;
   font-weight: bold;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
 }
-/* line 92, ../sass/past.scss */
+/* line 91, ../sass/past.scss */
 article .contents > section ul li p i {
   color: #012052;
 }
-/* line 96, ../sass/past.scss */
+/* line 95, ../sass/past.scss */
 article .contents > section ul li p .fa-circle {
   color: #012052;
 }
-/* line 100, ../sass/past.scss */
+/* line 99, ../sass/past.scss */
 article .contents > section ul li p .fa-inverse {
   color: #C93;
 }
-/* line 105, ../sass/past.scss */
+/* line 104, ../sass/past.scss */
 article .contents > section ul li h5, article .contents > section ul li p {
   background-color: #fff;
 }
-/* line 109, ../sass/past.scss */
+/* line 108, ../sass/past.scss */
 article .contents > section ul li a:after {
   content: ' ≫';
 }
 
 @media screen and (min-width: 40em) {
-  /* line 119, ../sass/past.scss */
+  /* line 118, ../sass/past.scss */
   .contents {
     margin: 0 auto;
   }
-  /* line 122, ../sass/past.scss */
+  /* line 121, ../sass/past.scss */
   .contents > section:before {
     left: 50% !important;
   }
-  /* line 126, ../sass/past.scss */
+  /* line 125, ../sass/past.scss */
   .contents h4 {
     margin: 0 auto 2em auto !important;
   }
-  /* line 130, ../sass/past.scss */
+  /* line 129, ../sass/past.scss */
   .contents ul {
     padding-left: 0;
     justify-content: space-between;
   }
-  /* line 134, ../sass/past.scss */
+  /* line 133, ../sass/past.scss */
   .contents ul .show {
     width: 46%;
     margin-top: 2em;
     text-align: center;
   }
-  /* line 141, ../sass/past.scss */
+  /* line 140, ../sass/past.scss */
   .contents ul .show:nth-of-type(odd):before {
     border-top: 1em solid #fff;
     border-right: 1em solid transparent;
     right: -1em;
     left: auto;
   }
-  /* line 149, ../sass/past.scss */
+  /* line 148, ../sass/past.scss */
   .contents ul .show:nth-of-type(even) {
     margin: 7em 0 0 -2em;
   }

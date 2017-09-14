@@ -44,21 +44,28 @@ article {
 			text-shadow : -1px -1px 3px $black, 1px 1px 3px $black;
 			animation	: load 1s 1;
 			transform	: skewX(-10deg);
-			
+				
+			@include media($six) {
+				padding-top: 9em;
+			}
 				
 			h3 {
 				font-size	: 2.5em;
 				font-weight : normal;
 				
-				@include media($fh) {
-					font-size	: 1.5em;
-					line-height : 1.5em; 
+				@include media($six) {
+					font-size	: 1em;
+					line-height : 1em; 
 				}
 				
 				span {
 					display		 : block;
 					font-size	 : 3em;
 					margin-bottom: 0.3em;
+				
+					@include media($six) {
+						font-size: 5em;
+					}
 				}
 			}
 		
@@ -67,9 +74,19 @@ article {
 				font-size	: 1.5em;
 				font-weight : normal;
 				
+				@include media($six) {
+					font-size		: 1.5em;
+					line-height		: 1em; 
+					margin-bottom	: 5em;
+				}
+				
 				&#scroll {
 					margin	: 5em 0 0 3em;
 					cursor	: pointer;
+				
+					@include media($six) {
+						display: none;
+					}
 			
 					span {
 						display: block;
@@ -90,7 +107,6 @@ article {
 		
 		@include media($six) {
 			border-left : none !important;
-			border-top	: 1px dotted lighten($black,50%);
 			width		: $max !important;
 		
 			&:nth-of-type(odd) {
