@@ -12,6 +12,7 @@ html {
 		background		: center -200px no-repeat fixed;
 		background-size : cover;
 		line-height		: 1.75em;
+		position: $r;
 		
 		.menu_open {
 			pointer-events	: none;
@@ -77,7 +78,7 @@ html {
 			@include fixB(-50px,55px,1);
 			
 			@include media($six) {
-				@include fixB(-50px,10px,6);
+				@include fixB(-50px,10px,3);
 			}
 			
 			a {

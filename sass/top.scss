@@ -78,30 +78,30 @@ html {
 						text-align	: center;
 						cursor		: pointer;
 						top			: $max * 0.48;
-					}
 					
-					@include media($six) {
-						z-index: 6;
-					}
+						@include media($six) {
+							z-index: 2;
+						}
 					
-					.slideCtrl.left, .slideCtrl.right {
-						top: $max / 2;
-					}
+						&.left {
+							left	: $max * 0.01;
+							top		: $max / 2;
+							height	: 2em;
+						}
 					
-					.slideCtrl.left {
-						left: $max * 0.01;
-					}
+						&.right {
+							right	: $max * 0.01;
+							top		: $max / 2;
+							height	: 2em;
+						}
 					
-					.slideCtrl.right {
-						right: $max * 0.01;
-					}
+						&.up {
+							left: $max * 0.02;
+						}
 					
-					.slideCtrl.up {
-						left: $max * 0.02;
-					}
-					
-					.slideCtrl.down {
-						right: $max * 0.02;
+						&.down {
+							right: $max * 0.02;
+						}
 					}
 				}
 			
@@ -110,7 +110,7 @@ html {
 					flex-flow: column nowrap;
 					
 					&#schedule {
-						@include abR(30%,0,6);
+						@include abR(30%,0,2);
 						
 						li {
 							background	: $navy;

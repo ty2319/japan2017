@@ -52,11 +52,7 @@ header#top {
 	}
 	
 	&.fix {
-		@include fixT(0,0,6);
-		
-		@include media($six) {
-			height: 550px;
-		}
+		@include fixT(0,0,2);
 		
 		#live {
 			top: 0.5em;
@@ -64,7 +60,7 @@ header#top {
 	}
 	
 	.new {
-		@include abR(0,0,2);
+		@include abR(0,0,1);
 		width			: 1.5em !important;
 		height			: 1.5em !important;
 		font-size		: 0.75em;
@@ -86,7 +82,7 @@ header#top {
 			}
 	
 			@include media($six) {
-				@include abT(0.8em,18%,6);
+				@include abT(0.8em,18%,2);
 				background: none;
 				text-align: left;
 			}
@@ -252,7 +248,7 @@ header#top {
 	}
 	
 	#live {
-		@include abR(-1em,0.5em,7);
+		@include abR(-1em,0.5em,1);
 		display		: block;
 		width		: $max * 0.1;
 		min-width	: 70px;

@@ -15,10 +15,11 @@
 		@include media($nf) {
 			order: 1;
 			width: $max !important;
-		}
-		
-		@include media($nf) {
 			border-bottom: 1px dotted lighten($black , 30%);
+			
+			&:last-child {
+				border: none;
+			}
 		}
 		
 		h5 {
@@ -36,7 +37,7 @@
 					margin-left: 1.5em;
 				}
 				
-				@include media($fh) {
+				@include media($six) {
 					margin-left: 1em;
 				}
 				
