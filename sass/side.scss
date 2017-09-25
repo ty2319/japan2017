@@ -4,7 +4,7 @@
 @import "settings";
 
 #side {
-	@include fixB(35%,0,1);
+	@include fixB(35%,0,3);
 	right		: 0.5rem;
 	text-align	: right;
 	font-size	: 0.9rem;
@@ -33,4 +33,11 @@
 	@include media($fh) {
 		display: none !important;
 	}
+}
+
+#modal {
+	@include fixT(0,0,2);
+	width			: $max;
+	height			: $max;
+	background-color: $modal;
 }

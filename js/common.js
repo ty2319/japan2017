@@ -263,18 +263,10 @@
 	
 	//sidemenu
 	side = function() {
-		$('#side').hover(function() {
+		$('#side').on('touchstart hover', function(){
 			$('body').append('<div id="modal"></div>');
 			$('span',this).fadeIn('slow');
-		},function() {
-			$('div#modal').remove();
-			$('span',this).fadeOut('slow');
-		});
-		
-		$('#side').on('touchstart', function(){
-			$('body').append('<div id="modal"></div>');
-			$('span',this).fadeIn('slow');
-    	}).on('touchend', function(){
+    	}).on('touchend mousereave', function(){
         	$('div#modal').remove();
 			$('span',this).fadeOut('slow');
     	});
@@ -285,8 +277,8 @@
 		goTop();
 		nav();
 		title();
-		side();
 		smoothScroll();
+		side();
 	});	
 	
 	$(window).resize(function() {
