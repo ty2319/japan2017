@@ -123,7 +123,7 @@ html body main > div ul#schedule {
   position: absolute;
   top: 30%;
   right: 0;
-  z-index: 2;
+  z-index: 1;
 }
 /* line 115, ../sass/top.scss */
 html body main > div ul#schedule li {

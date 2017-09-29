@@ -110,7 +110,7 @@ html {
 					flex-flow: column nowrap;
 					
 					&#schedule {
-						@include abR(30%,0,2);
+						@include abR(30%,0,1);
 						
 						li {
 							background	: $navy;
