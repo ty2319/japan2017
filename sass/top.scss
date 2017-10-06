@@ -126,7 +126,12 @@ html {
 							font-size	: 0.8em;
 							font-weight	: bold;
 							line-height	: 1.5em !important;
-							cursor		: pointer;
+							color		: lighten($black , 50%);
+							
+							&:nth-of-type(1) {
+								cursor: pointer;
+								color : $white;
+							}
 							
 							&:before {
 								border-bottom	: 1.5em solid $navy;
@@ -144,7 +149,8 @@ html {
 								transform:rotate(90deg);
 							}
 							
-							&:hover,&.current {
+							/*&:hover,*/
+							&.current {
 								background	: $white;
 								color		: $navy;
 							

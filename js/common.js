@@ -116,7 +116,7 @@
 		var	path	= location.href.split('/'),
 			loc		= path[path.length-1],
 			visit	= new Date(),
-			visited = visit.getFullYear() + "-" + "0" + (visit.getMonth() + 1) + "-" + visit.getDate();
+			visited = visit.getFullYear() + "-" + (visit.getMonth() + 1) + "-" + visit.getDate();
 			
 		$.cookie('visit.' + loc , visited);
 		
@@ -128,13 +128,13 @@
 				loc = 'index';
 			}
 			
-			if(href.match('city') && href.match(loc)) {
+			if(href.match('japan') && href.match(loc)) {
 				$(this).addClass('active');
 			}
 		});
  
 		//JSONファイルを取得
-		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
+		$.getJSON('/symbol/hp/baseball/games/2017/japan/js/update.json').done(function(json, status, request) {
 			$(json).each(function(i, data) {
 				
 				var today	= new Date( $.now() ),

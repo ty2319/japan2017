@@ -140,9 +140,15 @@ html body main > div ul#schedule li {
   font-size: 0.8em;
   font-weight: bold;
   line-height: 1.5em !important;
-  cursor: pointer;
+  color: gray;
+  /*&:hover,*/
 }
 /* line 131, ../sass/top.scss */
+html body main > div ul#schedule li:nth-of-type(1) {
+  cursor: pointer;
+  color: #fff;
+}
+/* line 136, ../sass/top.scss */
 html body main > div ul#schedule li:before {
   border-bottom: 1.5em solid #012052;
   border-left: 2.15em solid transparent;
@@ -156,21 +162,21 @@ html body main > div ul#schedule li:before {
   left: 0;
   z-index: 0;
 }
-/* line 142, ../sass/top.scss */
+/* line 147, ../sass/top.scss */
 html body main > div ul#schedule li span {
   display: inline-block;
   transform: rotate(90deg);
 }
-/* line 147, ../sass/top.scss */
-html body main > div ul#schedule li:hover, html body main > div ul#schedule li.current {
+/* line 153, ../sass/top.scss */
+html body main > div ul#schedule li.current {
   background: #fff;
   color: #012052;
 }
-/* line 151, ../sass/top.scss */
-html body main > div ul#schedule li:hover:before, html body main > div ul#schedule li.current:before {
+/* line 157, ../sass/top.scss */
+html body main > div ul#schedule li.current:before {
   border-bottom: 1.5em solid #fff;
 }
-/* line 159, ../sass/top.scss */
+/* line 165, ../sass/top.scss */
 html body main > div article {
   display: flex;
   flex-flow: row wrap;
@@ -178,7 +184,7 @@ html body main > div article {
   width: 500%;
   background: none;
 }
-/* line 166, ../sass/top.scss */
+/* line 172, ../sass/top.scss */
 html body main > div article h3 {
   font-size: 2.5em;
   font-weight: normal;
@@ -189,18 +195,18 @@ html body main > div article h3 {
   padding: 4em 1.5% 2em 1.5%;
 }
 @media all and (max-width: 600px) {
-  /* line 166, ../sass/top.scss */
+  /* line 172, ../sass/top.scss */
   html body main > div article h3 {
     font-size: 2em;
     line-height: 2em;
     padding: 2em 1.5%;
   }
 }
-/* line 181, ../sass/top.scss */
+/* line 187, ../sass/top.scss */
 html body main > div article h3 span {
   font-size: 0.5em;
 }
-/* line 186, ../sass/top.scss */
+/* line 192, ../sass/top.scss */
 html body main > div article .contents {
   background: none !important;
   overflow-y: auto;
@@ -208,17 +214,17 @@ html body main > div article .contents {
   margin-bottom: 3em;
   padding: 0 1.5%;
 }
-/* line 193, ../sass/top.scss */
+/* line 199, ../sass/top.scss */
 html body main > div article .contents img {
   width: 100%;
   height: auto;
 }
-/* line 198, ../sass/top.scss */
+/* line 204, ../sass/top.scss */
 html body main > div article .contents p {
   padding: 2em;
   color: #fff;
 }
-/* line 203, ../sass/top.scss */
+/* line 209, ../sass/top.scss */
 html body main > div article .contents ol {
   display: flex;
   flex-flow: row wrap;
@@ -226,11 +232,11 @@ html body main > div article .contents ol {
   list-style: none;
   width: 100%;
 }
-/* line 211, ../sass/top.scss */
+/* line 217, ../sass/top.scss */
 html body main > div article .contents a {
   margin: 2em auto 0 auto;
 }
-/* line 214, ../sass/top.scss */
+/* line 220, ../sass/top.scss */
 html body main > div article .contents a button {
   color: #333333;
   background-color: #fff;
@@ -246,11 +252,11 @@ html body main > div article .contents a button {
   min-width: 250px;
   transition: all 1s;
 }
-/* line 229, ../sass/top.scss */
+/* line 235, ../sass/top.scss */
 html body main > div article .contents a button:hover {
   opacity: 1;
 }
-/* line 233, ../sass/top.scss */
+/* line 239, ../sass/top.scss */
 html body main > div article .contents a button span {
   margin-right: 1em;
 }

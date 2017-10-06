@@ -14,7 +14,7 @@
 <meta property="og:country-name" content="Japan,日本" />
 <meta property="og:locality" content="Osaka,大阪" />
 <meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
-<link rel="apple-touch-icon-precomposed" href="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/city/icon.png" />
+<link rel="apple-touch-icon-precomposed" href="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/japan/icon.png" />
 <link rel="stylesheet" href="css/import.css" />
 <link rel="stylesheet" type="text/css" href="css/jquery.bracket.min.css" />
 </head>
@@ -36,34 +36,34 @@
 <script type="text/javascript">
 	var minimalData = {
 		teams : [
-			["トヨタ自動車", "九州三菱自動車"],
-			["NTT東日本", "三菱重工神戸・高砂"],
-			["JR北海道<i>硬式野球ｸﾗﾌﾞ</i>", "新日鐵住金東海REX"],
-			["JR四国", "Honda"],
-			["日立製作所", "三菱重工名古屋"],
-			["JR東日本", "伏木海陸運送"],
-			["東芝", "日本新薬"],
-			["日本製紙石巻", "Honda熊本"],
-			["日本通運", "三菱重工広島"],
-			["三菱自動車岡崎", "パナソニック"],
-			["西部ガス", "東京ガス"],
-			["新日鐵住金鹿島", "西濃運輸"],
-			["日本生命", "三菱日立ﾊﾟﾜｰｼｽﾃﾑｽﾞ"],
-			["Honda鈴鹿", "きらやか銀行"],
-			["セガサミー", "東邦ガス"],
-			["NTT西日本", "JR西日本"]
+			["JR東日本東北", "新日鐵住金広畑"],
+			["明治安田生命", "和歌山箕島球友会"],
+			["JR西日本", "NTT東日本"],
+			["Honda", "王子"],
+			["日本製紙石巻", "トヨタ自動車"],
+			["東京ガス", "NTT西日本"],
+			["三菱重工神戸・高砂", "フェデックス"],
+			["JR四国", "東芝"],
+			["JX-ENEOS", "日本生命"],
+			["大阪ガス", "三菱自動車岡崎"],
+			["JR九州", "<i>新日鐵住金かずさﾏｼﾞｯｸ</i>"],
+			["JR東日本", "三菱重工広島"],
+			["新日鐵住金鹿島", "日本新薬"],
+			["日本通運", "沖縄電力"],
+			["ヤマハ", "パナソニック"],
+			["JR北海道<i>硬式野球ｸﾗﾌﾞ</i>", "日立製作所"]
 		],
 		results : [
 			[
-				[5,1],[7,5],[0,2],[0,10],[3,5],[3,0],[4,2],[0,4],[5,3],[2,3],[4,7],[5,6],[4,5],[3,2],[8,4],[4,5]
+				[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,]
 			],[
-				[3,6],[3,0],[0,3],[4,1],[2,0],[2,8],[1,0],[6,8]
+				[,],[,],[,],[,],[,],[,],[,],[,]
 			],[
-				[6,5],[4,5],[2,0],[12,3]
+				[,],[,],[,],[,]
 			],[
-			 	[1,0],[5,3]
+			 	[,],[,]
 			],[
-				[10,4]
+				[,]
 			]
 		]
 	}
@@ -73,11 +73,11 @@
           init: minimalData,
 		  skipConsolationRound: true
 		});		
-		$('div.jQBracket .round:nth-child(1) .match:nth-child(16) .team:nth-child(1)').addClass('west');	
-		$('div.jQBracket .round:nth-child(1) .match:nth-child(2) .team:nth-child(1) , div.jQBracket .round:nth-child(2) .match:nth-child(1) .team:nth-child(2) , div.jQBracket .round:nth-child(3) .match:nth-child(1) .team:nth-child(1) , div.jQBracket .round:nth-child(4) .match:nth-child(1) .team:nth-child(1) , div.jQBracket .round:nth-child(5) .match:nth-child(1) .team:nth-child(1)').addClass('east');
+		$('div.jQBracket .round:nth-child(1) .match:nth-child(6) .team:nth-child(2)').addClass('west');	
+		$('div.jQBracket .round:nth-child(1) .match:nth-child(3) .team:nth-child(2)').addClass('east');
 	});
-</script>
-<script type="text/javascript" src="js/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/common.js"></script> 
+</script> 
+<script type="text/javascript" src="js/jquery.cookie.js"></script> 
+<script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>
