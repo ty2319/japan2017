@@ -12,10 +12,9 @@
 		$('header#title').append('<p id="scroll">scroll<span class="fa fa-angle-down fa-2x"></span></p>');		
 		$('.contents:odd').css('background-color','#e9f2ff');
 		$('.contents:even').css('background-color','#FFFFFF');
-		$('.contents:eq(0)').css('border-top' , '#012052 7px solid');
 		
 		$('.contents').each(function() {
-			var A = Math.floor(6*Math.random());
+			var A = Math.floor(7*Math.random()) + 1;
             $(this).addClass('bg'+A);
         });
 	},
@@ -117,7 +116,7 @@
 		var	path	= location.href.split('/'),
 			loc		= path[path.length-1],
 			visit	= new Date(),
-			visited = visit.getFullYear() + "-" + "0" + (visit.getMonth() + 1) + "-" + visit.getDate();
+			visited = visit.getFullYear() + "-" + (visit.getMonth() + 1) + "-" + visit.getDate();
 			
 		$.cookie('visit.' + loc , visited);
 		
@@ -129,35 +128,37 @@
 				loc = 'index';
 			}
 			
-			if(href.match('city') && href.match(loc)) {
+			if(href.match('japan') && href.match(loc)) {
 				$(this).addClass('active');
 			}
 		});
  
 		//JSONファイルを取得
-		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
+		$.getJSON('/symbol/hp/baseball/games/2017/japan/js/update.json').done(function(json, status, request) {
+			
+			var cnt = 0;
+			
 			$(json).each(function(i, data) {
 				
 				var today	= new Date( $.now() ),
-					cnt		= 0,
 					elem	= '.' + data.class, // class
 					date	= new Date( data.date ), // date
-					ago		= date.setDate(date.getDate() + 4); // 更新日 + 5日
+					ago		= date.setDate(date.getDate() + 5); // 更新日 + 5日
 		
 				if (today < ago) { // 今日(today)がago(更新日 + 5日)より前なら
 					if ($.cookie('visit' + elem + '.html') == null || $.cookie('visit' + elem + '.html') < data.date) {
-						$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
+						$('#global').find(elem).append('<span class="new">N</span>'); // クラス「new」を付ける
 					}
 				} else {
 					$.cookie('visit' + elem + '.html' , null);						
 				}
 				
 				cnt = $('#global dd').find('.new').length;
-		
-				if (cnt > 0) {
-					$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
-				}		
 			});
+		
+			if (cnt > 0) {
+				$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
+			}		
 		});
 	},
 	
@@ -171,7 +172,7 @@
 		}
 			
 		var ct	= $('.contents:first').offset().top + 7;
-		var A	= Math.floor(9*Math.random());
+		var A	= Math.floor(11*Math.random()) + 1;
 		
 		$('body').addClass('bg'+A);
 		
@@ -264,18 +265,10 @@
 	
 	//sidemenu
 	side = function() {
-		$('#side').hover(function() {
+		$('#side').on('touchstart hover', function(){
 			$('body').append('<div id="modal"></div>');
 			$('span',this).fadeIn('slow');
-		},function() {
-			$('div#modal').remove();
-			$('span',this).fadeOut('slow');
-		});
-		
-		$('#side').on('touchstart', function(){
-			$('body').append('<div id="modal"></div>');
-			$('span',this).fadeIn('slow');
-    	}).on('touchend', function(){
+    	}).on('touchend mousereave', function(){
         	$('div#modal').remove();
 			$('span',this).fadeOut('slow');
     	});
@@ -286,8 +279,8 @@
 		goTop();
 		nav();
 		title();
-		side();
 		smoothScroll();
+		side();
 	});	
 	
 	$(window).resize(function() {

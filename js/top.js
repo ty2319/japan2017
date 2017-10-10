@@ -41,9 +41,9 @@
 		});
 	},
 	
-	Push = function() {
+	Psh = function() {
 		// 使用例
-		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
+		$.getJSON('/symbol/hp/baseball/games/2017/japan/js/update.json').done(function(json, status, request) {
 			$(json).each(function(i, data) {
 					
 				var today	= new Date( $.now() ); // 今日の日付を取得
@@ -69,13 +69,13 @@
 					Push.Permission.request();
 					
 					Push.create('日本選手権特設サイト', {
-					　　body	: '1回戦のマスコットリポートを公開しました。',
+					　　body	: '日本選手権特設サイトを公開しました。',
 					　　icon	: 'icon.gif',
 					　　timeout	: 8000, // 通知が消えるタイミング
 					　　vibrate	: [100, 100, 100], // モバイル端末でのバイブレーション秒数
-					　　onClick	: function() {
-					　　　　window.open('http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/city/gallery.html');
-					　　}
+					　　/*onClick	: function() {
+					　　　　window.open('http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/japan/index.html');
+					　　}*/
 					});
 				}
 			
@@ -102,7 +102,7 @@
 	$(document).ready(function() {
 		Random();
 		Schedule();
-		Push();
+		Psh();
 		Slider();
 	});	
 	

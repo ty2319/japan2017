@@ -65,24 +65,18 @@ header#top #topnavi li {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 6;
+  z-index: 2;
 }
-@media all and (max-width: 600px) {
-  /* line 54, ../sass/header.scss */
-  #global.fix {
-    height: 550px;
-  }
-  /* line 60, ../sass/header.scss */
-  #global.fix #live {
-    top: 0.5em;
-  }
+/* line 57, ../sass/header.scss */
+#global.fix #live {
+  top: 0.5em;
 }
-/* line 66, ../sass/header.scss */
+/* line 62, ../sass/header.scss */
 #global .new {
   position: absolute;
-  top: 0;
+  top: 0.4em;
   right: 0;
-  z-index: 2;
+  z-index: 1;
   width: 1.5em !important;
   height: 1.5em !important;
   font-size: 0.75em;
@@ -94,29 +88,29 @@ header#top #topnavi li {
   border-radius: 1.5em !important;
   padding-top: 0.4em !important;
 }
-/* line 80, ../sass/header.scss */
+/* line 76, ../sass/header.scss */
 #global h2 {
   text-align: center;
   margin: -0.27em auto 0 auto;
 }
 @media all and (max-width: 1500px) {
-  /* line 80, ../sass/header.scss */
+  /* line 76, ../sass/header.scss */
   #global h2 {
     margin-top: -0.2em;
   }
 }
 @media all and (max-width: 600px) {
-  /* line 80, ../sass/header.scss */
+  /* line 76, ../sass/header.scss */
   #global h2 {
     position: absolute;
     top: 0.8em;
     left: 18%;
-    z-index: 6;
+    z-index: 2;
     background: none;
     text-align: left;
   }
 }
-/* line 94, ../sass/header.scss */
+/* line 90, ../sass/header.scss */
 #global h2 img {
   width: 30%;
   min-width: 340px;
@@ -124,12 +118,12 @@ header#top #topnavi li {
   height: auto;
 }
 @media all and (max-width: 600px) {
-  /* line 94, ../sass/header.scss */
+  /* line 90, ../sass/header.scss */
   #global h2 img {
     min-width: 90px;
   }
 }
-/* line 106, ../sass/header.scss */
+/* line 102, ../sass/header.scss */
 #global > dl {
   display: flex;
   flex-flow: row wrap;
@@ -140,19 +134,19 @@ header#top #topnavi li {
   margin-bottom: -0.27em;
 }
 @media all and (max-width: 600px) {
-  /* line 106, ../sass/header.scss */
+  /* line 102, ../sass/header.scss */
   #global > dl {
     height: 550px;
     overflow: auto;
   }
 }
-/* line 120, ../sass/header.scss */
+/* line 116, ../sass/header.scss */
 #global > dl .menu-trigger, #global > dl .menu-trigger span {
   display: block;
   transition: all .4s;
   box-sizing: border-box;
 }
-/* line 126, ../sass/header.scss */
+/* line 122, ../sass/header.scss */
 #global > dl .menu-trigger {
   position: absolute;
   top: 0;
@@ -163,13 +157,13 @@ header#top #topnavi li {
   padding: 0.8% 1%;
 }
 @media all and (max-width: 1500px) {
-  /* line 126, ../sass/header.scss */
+  /* line 122, ../sass/header.scss */
   #global > dl .menu-trigger {
     padding-top: 0.4%;
   }
 }
 @media all and (max-width: 600px) {
-  /* line 126, ../sass/header.scss */
+  /* line 122, ../sass/header.scss */
   #global > dl .menu-trigger {
     padding: 1%;
     font-size: 0.75rem;
@@ -177,6 +171,13 @@ header#top #topnavi li {
     background-color: rgba(0, 0, 0, 0.8);
     filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
     -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
+  }
+  /* line 138, ../sass/header.scss */
+  #global > dl .menu-trigger .new {
+    position: absolute;
+    top: 0.4em;
+    left: 3.5em;
+    z-index: 1;
   }
 }
 /* line 143, ../sass/header.scss */
@@ -242,33 +243,29 @@ header#top #topnavi li {
   /* line 184, ../sass/header.scss */
   #global > dl > dd {
     margin-bottom: 0;
-    padding: 2em 1em;
+    padding: 6em 1em 1em;
     background-color: rgba(0, 0, 0, 0.8);
     filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
     -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
   }
-  /* line 197, ../sass/header.scss */
-  #global > dl > dd:nth-of-type(1) {
-    padding: 6em 1em 1em;
-  }
 }
-/* line 202, ../sass/header.scss */
+/* line 198, ../sass/header.scss */
 #global > dl > dd:nth-of-type(2) {
   border-left: #fff 1px dotted;
   border-right: #fff 1px dotted;
 }
 @media all and (max-width: 600px) {
-  /* line 202, ../sass/header.scss */
+  /* line 198, ../sass/header.scss */
   #global > dl > dd:nth-of-type(2) {
     border: none;
   }
 }
-/* line 211, ../sass/header.scss */
+/* line 207, ../sass/header.scss */
 #global > dl > dd dl {
   margin: 0 auto;
   display: none;
 }
-/* line 215, ../sass/header.scss */
+/* line 211, ../sass/header.scss */
 #global > dl > dd dl dt {
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -276,27 +273,27 @@ header#top #topnavi li {
   border-top: #fff 1px solid;
   border-bottom: #fff 1px solid;
 }
-/* line 223, ../sass/header.scss */
+/* line 219, ../sass/header.scss */
 #global > dl > dd dl dd {
   background: none;
   margin: 0.5em 0 0 1.5em;
   color: #737373;
   position: relative;
 }
-/* line 229, ../sass/header.scss */
+/* line 225, ../sass/header.scss */
 #global > dl > dd dl dd a {
   color: #fff;
 }
-/* line 232, ../sass/header.scss */
+/* line 228, ../sass/header.scss */
 #global > dl > dd dl dd a.active {
   color: #2c7eff;
   text-decoration: line-through;
 }
-/* line 238, ../sass/header.scss */
+/* line 234, ../sass/header.scss */
 #global > dl > dd dl dd span {
   margin-right: 0.5rem;
 }
-/* line 244, ../sass/header.scss */
+/* line 240, ../sass/header.scss */
 #global > dl > dd i {
   font-style: normal;
   font-family: century;
@@ -305,17 +302,17 @@ header#top #topnavi li {
   margin-left: 1rem;
 }
 @media all and (max-width: 1200px) {
-  /* line 244, ../sass/header.scss */
+  /* line 240, ../sass/header.scss */
   #global > dl > dd i {
     display: none;
   }
 }
-/* line 258, ../sass/header.scss */
+/* line 254, ../sass/header.scss */
 #global #live {
   position: absolute;
   top: -1em;
   right: 0.5em;
-  z-index: 7;
+  z-index: 1;
   display: block;
   width: 10%;
   min-width: 70px;

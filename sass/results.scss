@@ -10,14 +10,16 @@
 		text-align	: center;
 		order		: 2;
 		position	: $r;
+		padding-top	: 7em !important;
 		
 		@include media($nf) {
 			order: 1;
 			width: $max !important;
-		}
-		
-		@include media($nf) {
 			border-bottom: 1px dotted lighten($black , 30%);
+			
+			&:last-child {
+				border: none;
+			}
 		}
 		
 		h5 {
@@ -35,7 +37,7 @@
 					margin-left: 1.5em;
 				}
 				
-				@include media($fh) {
+				@include media($six) {
 					margin-left: 1em;
 				}
 				

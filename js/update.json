@@ -1,11 +1,11 @@
 ﻿[
   {
     "class": "index",
-    "date" : "2017-07-24"
+    "date" : "2017-10-10"
   },
   {
     "class": "tournament",
-    "date" : "2017-07-26"
+    "date" : "2017-10-6"
   },
   {
     "class": "results",
@@ -21,11 +21,7 @@
   },
   {
     "class": "access",
-    "date" : "2017-06-16"
-  },
-  {
-    "class": "addition",
-    "date" : "2017-06-16"
+    "date" : "2017-10-6"
   },
   {
     "class": "mascot",
@@ -37,10 +33,10 @@
   },
   {
     "class": "history",
-    "date" : "2017-06-16"
+    "date" : "2017-10-6"
   },
   {
     "class": "past",
-    "date" : "2017-06-16"
+    "date" : "2017-10-6"
   }
 ]

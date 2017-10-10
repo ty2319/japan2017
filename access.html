@@ -13,7 +13,7 @@
 <meta property="og:country-name" content="Japan,日本" />
 <meta property="og:locality" content="Osaka,大阪" />
 <meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
-<link rel="apple-touch-icon-precomposed" href="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/city/icon.png" />
+<link rel="apple-touch-icon-precomposed" href="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/japan/icon.gif" />
 <link rel="stylesheet" href="css/import.css" />
 </head>
 <body onload='initialize()'>
@@ -41,9 +41,9 @@ var Latlng;
 var Options;
 var info;
 
-var address = '東京都文京区後楽1-3-61';　//　★　目的地の住所　★
-var place = '東京ドーム';　//　★　目的地名　★
-var goal = encodeURI('東京ドーム');　//　★　ルート検索の目的地入力　★
+var address = '大阪府大阪市西区千代崎3-中2-1';　//　★　目的地の住所　★
+var place = '京セラドーム大阪';　//　★　目的地名　★
+var goal = encodeURI('京セラドーム大阪');　//　★　ルート検索の目的地入力　★
 var gflg = 1;　//　★　住所から場所を特定する：1、しない：0　★
 
 var dat = '&date=' + new Date().getYear() + '%2F' + eval(new Date().getMonth()+1) + '%2F' + new Date().getDate();
@@ -72,7 +72,7 @@ function initialize(){
       if (status == google.maps.GeocoderStatus.OK && gflg == 1) {
         Latlng = results[0].geometry.location;
       } else {
-        Latlng = new google.maps.LatLng(35.705768,139.751777);　//　★住所から場所を特定しない（できない）場合、緯度と経度を入力★
+        Latlng = new google.maps.LatLng(34.669306,135.476124);　//　★住所から場所を特定しない（できない）場合、緯度と経度を入力★
       }
 
         Mymap.setCenter(Latlng);
@@ -84,7 +84,7 @@ function initialize(){
         });
 
             info = new google.maps.InfoWindow({
-            content: '<div style="min-height:3rem;"><strong>【' + place + '】</strong>' + '<br>' + address + '<br>' + link + '</div>',
+            content: '<div style="min-width:200px;"><strong>【' + place + '】</strong>' + '<br>' + address + '<br>' + link + '</div>',
             maxWidth: 1000
             });
             info.open(Mymap,Mymarker);
@@ -105,9 +105,10 @@ function initialize(){
 }
 
 $(window).on("load resize", function() {
-	$('#canvas').css({'height': $(window).height() - $('footer').outerHeight()});
+	$('#canvas').css({'padding': 0 ,'height': $(window).height() - $('footer').outerHeight()});
 });
-</script>
+</script> 
+</script> 
 <script type="text/javascript" src="js/jquery.cookie.js"></script> 
 <script type="text/javascript" src="js/common.js"></script>
 </body>

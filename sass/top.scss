@@ -33,8 +33,9 @@ html {
 				}
 				
 				&:nth-child(2) {
-					background	: url(#{$ip}top/back.jpg) no-repeat;
-					background-size: cover;
+					background		: url(#{$ip}top/back.jpg) no-repeat;
+					background-size	: cover;
+					overflow-y		: auto;
 				}
 			
 				&.slideFrame {
@@ -78,27 +79,30 @@ html {
 						text-align	: center;
 						cursor		: pointer;
 						top			: $max * 0.48;
-						z-index		: 6;
-					}
 					
-					.slideCtrl.left, .slideCtrl.right {
-						top: $max / 2;
-					}
+						@include media($six) {
+							z-index: 2;
+						}
 					
-					.slideCtrl.left {
-						left: $max * 0.01;
-					}
+						&.left {
+							left	: $max * 0.01;
+							top		: $max / 2;
+							height	: 2em;
+						}
 					
-					.slideCtrl.right {
-						right: $max * 0.01;
-					}
+						&.right {
+							right	: $max * 0.01;
+							top		: $max / 2;
+							height	: 2em;
+						}
 					
-					.slideCtrl.up {
-						left: $max * 0.02;
-					}
+						&.up {
+							left: $max * 0.02;
+						}
 					
-					.slideCtrl.down {
-						right: $max * 0.02;
+						&.down {
+							right: $max * 0.02;
+						}
 					}
 				}
 			
@@ -107,7 +111,7 @@ html {
 					flex-flow: column nowrap;
 					
 					&#schedule {
-						@include abR(30%,0,6);
+						@include abR(30%,0,1);
 						
 						li {
 							background	: $navy;
@@ -123,7 +127,12 @@ html {
 							font-size	: 0.8em;
 							font-weight	: bold;
 							line-height	: 1.5em !important;
-							cursor		: pointer;
+							color		: lighten($black , 50%);
+							
+							&:nth-of-type(1) {
+								cursor: pointer;
+								color : $white;
+							}
 							
 							&:before {
 								border-bottom	: 1.5em solid $navy;
@@ -141,7 +150,8 @@ html {
 								transform:rotate(90deg);
 							}
 							
-							&:hover,&.current {
+							/*&:hover,*/
+							&.current {
 								background	: $white;
 								color		: $navy;
 							
@@ -182,7 +192,6 @@ html {
 					
 					.contents {
 						background	: none !important;
-						overflow-y	: auto;
 						width		: $max / 5;
 						margin-bottom: 3em;
 						padding		: 0 $max*0.015;
