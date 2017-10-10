@@ -33,8 +33,9 @@ html {
 				}
 				
 				&:nth-child(2) {
-					background	: url(#{$ip}top/back.jpg) no-repeat;
-					background-size: cover;
+					background		: url(#{$ip}top/back.jpg) no-repeat;
+					background-size	: cover;
+					overflow-y		: auto;
 				}
 			
 				&.slideFrame {
@@ -191,7 +192,6 @@ html {
 					
 					.contents {
 						background	: none !important;
-						overflow-y	: auto;
 						width		: $max / 5;
 						margin-bottom: 3em;
 						padding		: 0 $max*0.015;

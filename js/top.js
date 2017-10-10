@@ -41,7 +41,7 @@
 		});
 	},
 	
-	Push = function() {
+	Psh = function() {
 		// 使用例
 		$.getJSON('/symbol/hp/baseball/games/2017/japan/js/update.json').done(function(json, status, request) {
 			$(json).each(function(i, data) {
@@ -70,7 +70,7 @@
 					
 					Push.create('日本選手権特設サイト', {
 					　　body	: '日本選手権特設サイトを公開しました。',
-					　　icon	: 'icon.png',
+					　　icon	: 'icon.gif',
 					　　timeout	: 8000, // 通知が消えるタイミング
 					　　vibrate	: [100, 100, 100], // モバイル端末でのバイブレーション秒数
 					　　/*onClick	: function() {
@@ -102,7 +102,7 @@
 	$(document).ready(function() {
 		Random();
 		Schedule();
-		Push();
+		Psh();
 		Slider();
 	});	
 	

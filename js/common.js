@@ -135,28 +135,30 @@
  
 		//JSONファイルを取得
 		$.getJSON('/symbol/hp/baseball/games/2017/japan/js/update.json').done(function(json, status, request) {
+			
+			var cnt = 0;
+			
 			$(json).each(function(i, data) {
 				
 				var today	= new Date( $.now() ),
-					cnt		= 0,
 					elem	= '.' + data.class, // class
 					date	= new Date( data.date ), // date
-					ago		= date.setDate(date.getDate() + 4); // 更新日 + 5日
+					ago		= date.setDate(date.getDate() + 5); // 更新日 + 5日
 		
 				if (today < ago) { // 今日(today)がago(更新日 + 5日)より前なら
 					if ($.cookie('visit' + elem + '.html') == null || $.cookie('visit' + elem + '.html') < data.date) {
-						$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
+						$('#global').find(elem).append('<span class="new">N</span>'); // クラス「new」を付ける
 					}
 				} else {
 					$.cookie('visit' + elem + '.html' , null);						
 				}
 				
 				cnt = $('#global dd').find('.new').length;
-		
-				if (cnt > 0) {
-					$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
-				}		
 			});
+		
+			if (cnt > 0) {
+				$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
+			}		
 		});
 	},
 	

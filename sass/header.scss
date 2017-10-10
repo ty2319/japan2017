@@ -134,6 +134,10 @@ header#top {
 				font-size		: 0.75rem;
 				width			: $max;
 				@include Modal;
+				
+				.new {
+					@include abT(0.4em,3.5em,1);
+				}
 			}
 			
 			span {
