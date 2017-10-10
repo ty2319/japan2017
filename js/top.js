@@ -69,13 +69,13 @@
 					Push.Permission.request();
 					
 					Push.create('日本選手権特設サイト', {
-					　　body	: '日本選手権特設サイトを公開しました。',
+					　　body	: 'マスコットの意気込みを公開しました。',
 					　　icon	: 'icon.gif',
 					　　timeout	: 8000, // 通知が消えるタイミング
 					　　vibrate	: [100, 100, 100], // モバイル端末でのバイブレーション秒数
-					　　/*onClick	: function() {
-					　　　　window.open('http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/japan/index.html');
-					　　}*/
+					　　onClick	: function() {
+					　　　　window.open('http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/japan/mascot.html');
+					　　}
 					});
 				}
 			

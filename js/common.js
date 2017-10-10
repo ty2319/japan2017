@@ -119,14 +119,14 @@
 			visited = visit.getFullYear() + "-" + (visit.getMonth() + 1) + "-" + visit.getDate();
 			
 		$.cookie('visit.' + loc , visited);
+			
+		if(loc == '') {
+			loc = 'index';
+		}
 		
 		$('nav#global a').each(function(e,v){
 			var links	= $(this);
 			var href	= links.attr('href');
-			
-			if(loc == '') {
-				loc = 'index';
-			}
 			
 			if(href.match('japan') && href.match(loc)) {
 				$(this).addClass('active');
@@ -144,6 +144,10 @@
 					elem	= '.' + data.class, // class
 					date	= new Date( data.date ), // date
 					ago		= date.setDate(date.getDate() + 5); // 更新日 + 5日
+					
+				if(loc == 'index') {
+					elem = '.index';
+				}
 		
 				if (today < ago) { // 今日(today)がago(更新日 + 5日)より前なら
 					if ($.cookie('visit' + elem + '.html') == null || $.cookie('visit' + elem + '.html') < data.date) {
