@@ -118,11 +118,11 @@
 			visit	= new Date(),
 			visited = visit.getFullYear() + "-" + (visit.getMonth() + 1) + "-" + visit.getDate();
 			
-		$.cookie('visit.' + loc , visited);
-			
 		if(loc == '') {
-			loc = 'index';
+			loc = 'index.html';
 		}
+			
+		$.cookie('visit.' + loc , visited);
 		
 		$('nav#global a').each(function(e,v){
 			var links	= $(this);

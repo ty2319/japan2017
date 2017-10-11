@@ -45,26 +45,21 @@
 		// 使用例
 		$.getJSON('/symbol/hp/baseball/games/2017/japan/js/update.json').done(function(json, status, request) {
 			$(json).each(function(i, data) {
-					
-				var today	= new Date( $.now() ); // 今日の日付を取得
-				var ua = navigator.userAgent.toLowerCase();
-		
-				// iPhone
-				var isiPhone = (ua.indexOf('iphone') > -1);
-				// iPad
-				var isiPad = (ua.indexOf('ipad') > -1);
-				// iPod
-				var isiPod = (ua.indexOf('ipod') > -1);
-				// Android
-				var isAndroid = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') > -1);
-				// Android Tablet
-				var isAndroidTablet = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') == -1);
-					
-				var elem	= '.' + data.class, // class
+				
+				var	path	= location.href.split('/'),
+					loc		= path[path.length-1],
+					today	= new Date( $.now() ), // 今日の日付を取得
+				 	ua = navigator.userAgent.toLowerCase(),
+					isiPhone = (ua.indexOf('iphone') > -1),
+					isiPad = (ua.indexOf('ipad') > -1),
+					isiPod = (ua.indexOf('ipod') > -1),
+					isAndroid = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') > -1),
+					isAndroidTablet = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') == -1),
+					elem	= '.' + data.class, // class
 					date	= new Date( data.date ), // date
 					ago		= date.setDate(date.getDate() + 1); // 更新日 + 1日
 		
-				if (elem == '.index' && today < ago && !isiPhone && !isiPad && !isiPod) { // 今日(today)がago(更新日 + 1日)より前なら
+				if (elem == '.index' || loc == '' && today < ago && !isiPhone && !isiPad && !isiPod) { // 今日(today)がago(更新日 + 1日)より前なら
 						
 					Push.Permission.request();
 					
