@@ -269,10 +269,18 @@
 	
 	//sidemenu
 	side = function() {
-		$('#side').on('touchstart hover', function(){
+		$('#side').hover(function() {
 			$('body').append('<div id="modal"></div>');
 			$('span',this).fadeIn('slow');
-    	}).on('touchend mousereave', function(){
+		},function() {
+			$('div#modal').remove();
+			$('span',this).fadeOut('slow');
+		});
+		
+		$('#side').on('touchstart', function(){
+			$('body').append('<div id="modal"></div>');
+			$('span',this).fadeIn('slow');
+    	}).on('touchend', function(){
         	$('div#modal').remove();
 			$('span',this).fadeOut('slow');
     	});
