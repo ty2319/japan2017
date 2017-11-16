@@ -3,8 +3,7 @@
 	//ie css
 	set = function() {
 		
-		$('#topnavi li a,footer li a,#issues a').prepend('¢‰ ');
-		$('#side li a').append(' °¸');
+		$('#topnavi li a,footer li a,#issues a').prepend('¢ÅE');
 		$('.box dt').not('#issues dt').append('°ß');
 		$('.dot dd').prepend('°¶');
 		$('.box2 dt').prepend('°Ω°°').append('°°°Ω');
@@ -12,10 +11,9 @@
 		$('header#title').append('<p id="scroll">scroll<span class="fa fa-angle-down fa-2x"></span></p>');		
 		$('.contents:odd').css('background-color','#e9f2ff');
 		$('.contents:even').css('background-color','#FFFFFF');
-		$('.contents:eq(0)').css('border-top' , '#012052 7px solid');
 		
 		$('.contents').each(function() {
-			var A = Math.floor(6*Math.random());
+			var A = Math.floor(7*Math.random()) + 1;
             $(this).addClass('bg'+A);
         });
 	},
@@ -32,7 +30,7 @@
 				if (flag == false) {
 					flag = true;
 					
-					if ($(window).width() > 500) {
+					if ($(window).width() > 600) {
 						pagetop.stop().animate({
 							'bottom': '50px'
 						}, 200);
@@ -114,71 +112,70 @@
 		   }
 		});
 		
-		var	path		= location.href.split('/'),
-			loc			= path[path.length-1];
+		var	path	= location.href.split('/'),
+			loc		= path[path.length-1],
+			visit	= new Date(),
+			visited = visit.getFullYear() + "-" + (visit.getMonth() + 1) + "-" + visit.getDate();
 			
-			$.cookie('visit.' + loc , 1);
- 
-		//JSON•’•°•§•Î§ÚºË∆¿
-		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
-			$(json).each(function(i, data) {
-				
-				var today	= new Date( $.now() ),
-					cnt		= 0,
-					elem	= '.' + data.class, // class
-					date	= new Date( data.date ), // date
-					ago		= date.setDate(date.getDate() + 4), // ππø∑∆¸ + 5∆¸
-					cont	= data.cont;
-		
-				if (today < ago && $.cookie('visit' + elem + '.html') != 1 || cont == 'yes') { // ∫£∆¸(today)§¨ago(ππø∑∆¸ + 5∆¸)§Ë§Í¡∞§ §È	
-					$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // •Ø•È•π°÷new°◊§Ú…’§±§Î
-				}
-				
-				if($.cookie('visit' + elem + '.html') == 1) {
-					$('#global').find(elem).children('.new').remove();
-					
-					if (today >= ago) {
-						$.cookie('visit' + elem + '.html' , null);						
-					}
-				}
-				
-				if (today >= ago && cont == 'yes') {
-					$('#global').find(elem).children('.new').remove();
-				}
-				
-				cnt = $('#global dd').find('.new').length;
-		
-				if (cnt > 0) {
-					$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
-				}		
-			});
-		});
+		if(loc == '') {
+			loc = 'index.html';
+		}
+			
+		$.cookie('visit.' + loc , visited);
 		
 		$('nav#global a').each(function(e,v){
 			var links	= $(this);
 			var href	= links.attr('href');
 			
-			if(loc == '') {
-				loc = 'index';
-			}
-			
-			if(href.match('city') && href.match(loc)) {
+			if(href.match('japan') && href.match(loc)) {
 				$(this).addClass('active');
 			}
+		});
+ 
+		//JSON•’•°•§•ÅEÚºË∆¿
+		$.getJSON('/symbol/hp/baseball/games/2017/japan/js/update.json').done(function(json, status, request) {
+			
+			var cnt = 0;
+			
+			$(json).each(function(i, data) {
+				
+				var today	= new Date( $.now() ),
+					elem	= '.' + data.class, // class
+					date	= new Date( data.date ), // date
+					ago		= date.setDate(date.getDate() + 5); // ππø∑∆ÅE+ 5∆ÅE
+					
+				if(loc == 'index') {
+					elem = '.index';
+				}
+		
+				if (today < ago) { // ∫£∆ÅEtoday)§¨ago(ππø∑∆ÅE+ 5∆ÅE§Ë§ÅE∞§ §ÅE
+					if ($.cookie('visit' + elem + '.html') == null || $.cookie('visit' + elem + '.html') < data.date) {
+						$('#global').find(elem).not('.index').append('<span class="new">N</span>'); // •Ø•È•π°÷new°◊§Ú…’§±§ÅE
+					}
+				} else {
+					$.cookie('visit' + elem + '.html' , null);						
+				}
+				
+				cnt = $('#global dd').find('.new').length;
+			});
+		
+			if (cnt > 0) {
+				$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
+			}		
 		});
 	},
 	
 	//title
 	title = function() {
 		
-		if ($(window).width() < 500) {
-			$('h2 img').attr('src' , 'img/common/logo2.png');
+		if ($(window).width() < 600) {
+			$('h2 img').attr('src' , 'img/common/logo2.gif');
 		} else {
 			$('h2 img').attr('src' , 'img/common/logo.png');
 		}
 			
 		var ct	= $('.contents:first').offset().top + 7;
-		var A	= Math.floor(9*Math.random());
+		var A	= Math.floor(11*Math.random()) + 1;
 		
 		$('body').addClass('bg'+A);
 		
@@ -201,7 +198,7 @@
 		return false;
 		});
 		
-		var set =  $('#global').height() + 1;//•¶•§•Û•…•¶æÂ…Ù§´§È§…§Ï§∞§È§§§Œ∞Ã√÷§« —≤Ω§µ§ª§Î§´
+		var set =  $('#global').height() + 1;//•¶•§•Û•…•¶æÂ…Ù§´§È§…§ÅE∞§È§§§Œ∞Ã√÷§« —≤Ω§µ§ª§ÅE´
 		var boxTop			= new Array;
 		var current			= -1;
 		var startPosition	= 0;
@@ -212,9 +209,9 @@
 				boxTop[i] = $(this).offset().top;
 			});
 		});
-		//∫«ΩÈ§ŒÕ◊¡«§Àclass="on"§Ú§ƒ§±§Î
+		//∫«ΩÈ§ŒÕ◊¡«§Àclass="on"§Ú§ƒ§±§ÅE
 		changeBox(0);
-		//•π•Ø•Ì°º•Î§∑§øª˛§ŒΩËÕ˝
+		//•π•Ø•˙Ωº•ÅE∑§øª˛§ŒΩËÕ˝
 		$(window).scroll(function(){
 			
 			var scrollPosition	= $(window).scrollTop();	
@@ -257,13 +254,13 @@
 				$('article #side li').removeClass('on');
 				$('article #side li:nth-child(' + secNum2 +')').addClass('on');
 	
-				/* ∞Ã√÷§À§Ë§√§∆∏ƒ Ã§ÀΩËÕ˝§Ú§∑§ø§§æÏπÁ°°
+				/* ∞Ã√÷§À§Ë§√§∆∏ƒ Ã§ÀΩËÕ˝§Ú§∑§ø§§æÅEÁ°°
 				if (current == 0) {
-					// ∏Ω∫ﬂ√œ§¨section1§ŒæÏπÁ§ŒΩËÕ˝
+					// ∏Ω∫ﬂ√œ§¨section1§ŒæÅEÁ§ŒΩËÕ˝
 				} else if (current == 1) {
-					// ∏Ω∫ﬂ√œ§¨section2§ŒæÏπÁ§ŒΩËÕ˝
+					// ∏Ω∫ﬂ√œ§¨section2§ŒæÅEÁ§ŒΩËÕ˝
 				} else if (current == 2) {
-					// ∏Ω∫ﬂ√œ§¨section3§ŒæÏπÁ§ŒΩËÕ˝
+					// ∏Ω∫ﬂ√œ§¨section3§ŒæÅEÁ§ŒΩËÕ˝
 				}*/
 			}
 		};
@@ -293,8 +290,8 @@
 		goTop();
 		nav();
 		title();
-		side();
 		smoothScroll();
+		side();
 	});	
 	
 	$(window).resize(function() {

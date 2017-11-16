@@ -117,7 +117,7 @@ $(window).on('load resize' , function() {
 		$(this).css('color','#666');
 	});
 	
-¡¡¡¡$('img.half').css('height','auto');
+	$('img.half').css('height','auto');
 	
 	$('article > section').each(function() {
         $(this).find('.half:eq(0) > table:eq(2)').css('margin-right', 0 );

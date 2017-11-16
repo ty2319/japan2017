@@ -64,12 +64,12 @@
 					Push.Permission.request();
 					
 					Push.create('日本選手権特設サイト', {
-					　　body	: '応援ガイドを公開しました。',
+					　　body	: 'マスコットリポートしました。',
 					　　icon	: 'icon.gif',
 					　　timeout	: 8000, // 通知が消えるタイミング
 					　　vibrate	: [100, 100, 100], // モバイル端末でのバイブレーション秒数
 					　　onClick	: function() {
-					　　　　window.open('http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/japan/aid.html');
+					　　　　window.open('http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/japan/mascot.html');
 					　　}
 					});
 				}

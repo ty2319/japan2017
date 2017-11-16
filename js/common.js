@@ -151,7 +151,7 @@
 		
 				if (today < ago) { // 今日(today)がago(更新日 + 5日)より前なら
 					if ($.cookie('visit' + elem + '.html') == null || $.cookie('visit' + elem + '.html') < data.date) {
-						$('#global').find(elem).append('<span class="new">N</span>'); // クラス「new」を付ける
+						$('#global').find(elem).not('.index').append('<span class="new">N</span>'); // クラス「new」を付ける
 					}
 				} else {
 					$.cookie('visit' + elem + '.html' , null);						

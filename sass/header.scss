@@ -251,12 +251,27 @@ header#top {
 		}
 	}
 	
-	#live {
+	/*#live {
 		@include abR(-1em,0.5em,1);
 		display		: block;
 		width		: $max * 0.1;
 		min-width	: 70px;
 		max-width	: 195px;
 		height		: auto;
+	}*/
+	
+	#live {
+		@include abR(0.5em,0.5em,2);
+		display: block;
+		width	  : $max * 0.18;
+		min-width : 180px;
+		max-width : 298px;
+		height	  : auto;
+		
+		@include media($six) {
+			width	  : $max * 0.25;
+			min-width : 140px;
+			top		  : 1em;
+		}
 	}
 }
