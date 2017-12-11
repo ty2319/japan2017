@@ -131,7 +131,7 @@ article .half dl, article .half ul, article .half p, article .half table {
 }
 /* line 122, ../sass/main.scss */
 article .one_third {
-  width: 33.33333% !important;
+  width: 33.3333333333% !important;
 }
 /* line 125, ../sass/main.scss */
 article .one_third:nth-of-type(3n-1) {
